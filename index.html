@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Organiser Feedback Survey — Project Plan</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 850px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.6; font-size: 13px; }
+  h1 { font-size: 22px; border-bottom: 3px solid #0066cc; padding-bottom: 8px; }
+  h2 { font-size: 17px; color: #0066cc; margin-top: 30px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  h3 { font-size: 14px; color: #333; margin-top: 20px; margin-bottom: 6px; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+  th, td { border: 1px solid #ccc; padding: 8px 10px; text-align: left; vertical-align: top; font-size: 13px; }
+  th { background: #0066cc; color: white; font-weight: bold; }
+  .tag { display: inline-block; background: #e8f0fe; color: #0066cc; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: bold; margin-right: 4px; }
+  .tag-green { background: #e6f4ea; color: #1e7e34; }
+  .tag-orange { background: #fff3e0; color: #e65100; }
+  .tag-red { background: #fce4ec; color: #c62828; }
+  .sub { font-size: 12px; color: #888; }
+  blockquote { background: #f0f7ff; border-left: 4px solid #0066cc; padding: 10px 14px; margin: 10px 0; font-size: 13px; color: #333; }
+  .phase { background: #f9f9f9; border: 1px solid #ddd; border-radius: 6px; padding: 14px 18px; margin: 12px 0; }
+  .phase-title { font-size: 15px; font-weight: bold; color: #0066cc; margin-bottom: 6px; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  li { margin-bottom: 4px; }
+  .highlight { background: #fff9c4; padding: 2px 4px; }
+</style>
+</head>
+<body>
+
+<h1>Organiser Feedback Survey — Project Plan</h1>
+<p><strong>Owner:</strong> Ilaria Basile &nbsp;|&nbsp; <strong>Last updated:</strong> 27 March 2026 &nbsp;|&nbsp; <strong>Status:</strong> <span class="tag-green tag">In Progress</span></p>
+<p><strong>Feeds into:</strong> <span class="tag">OKR 4</span> Automation of Manual Processes &nbsp;|&nbsp; <span class="tag">OKR 3</span> Platform Stability (CSAT/NPS) &nbsp;|&nbsp; <span class="tag">Product</span> Taimoor's feedback epic (Phase 1)</p>
+
+<h2>1. Context & Problem</h2>
+<p>We have no structured, recurring feedback loop from organisers. Post-event surveys historically fail (clients don't fill them). The March 18 Product & Business sync agreed on structured surveys during existing calls, but the format, questions, and tooling are undefined. Meanwhile, Ilaria is mapping the end-to-end organiser journey and needs real organiser data — not just TAM proxies.</p>
+
+<blockquote>
+<strong>Goal:</strong> Create a lightweight, event-cycle-based micro-survey system (max 5 questions per touchpoint) that gives us measurable, comparable data across clients and over time — without overwhelming organisers.
+</blockquote>
+
+<h2>2. Survey Model: Event-Cycle Based</h2>
+<p>Instead of one monthly survey for everyone, we trigger <strong>different micro-surveys at key moments</strong> in the event lifecycle. This means the questions are always relevant to what the organiser is actually doing RIGHT NOW.</p>
+
+<h3>Proposed Survey Touchpoints (4 surveys across the cycle)</h3>
+
+<table>
+<tr><th style="width:30px">#</th><th style="width:140px">Touchpoint</th><th style="width:160px">When to trigger</th><th>Who fills it</th><th style="width:110px">Duration</th></tr>
+<tr><td>S1</td><td><strong>Onboarding & Setup</strong></td><td>2–4 weeks after kickoff (once organiser has started configuring)</td><td>Organiser self-serve (link shared by TAM) <em>or</em> TAM fills on call</td><td>~3 min</td></tr>
+<tr><td>S2</td><td><strong>Pre-Event</strong></td><td>2–3 weeks before the event goes live</td><td>Organiser self-serve <em>or</em> TAM fills on call</td><td>~3 min</td></tr>
+<tr><td>S3</td><td><strong>Post-Event</strong></td><td>1–2 weeks after event ends (during or right after wash-up call)</td><td>Organiser self-serve (link shared by TAM) <em>or</em> TAM fills on call</td><td>~3 min</td></tr>
+<tr><td>S4</td><td><strong>Renewal / Annual</strong></td><td>~1 month before contract renewal (or annually for multi-year)</td><td>Organiser self-serve (link shared by TAM) <em>or</em> TAM fills on call</td><td>~3 min</td></tr>
+</table>
+
+<p><strong>Why 4 touchpoints:</strong> Each maps to a different phase of the journey, captures different pain points, and avoids survey fatigue. Most clients will hit 2–3 per year (not all 4).</p>
+
+<blockquote>
+<strong>Ownership model:</strong> Ideally the <strong>organiser fills the survey themselves</strong> (TAM shares the link). If the organiser hasn't completed it, the <strong>TAM fills it on a call</strong> as a backup. Only <strong>one person</strong> interacts with each organiser about surveys — no RM involvement — to avoid confusion and conflicting outreach.
+</blockquote>
+
+<h2>3. Proposed Questions Per Survey</h2>
+<p><em>Max 5 questions each. Mix of scored (1–10 or 1–5) + 1 open-ended. All questions designed to be measurable, comparable across clients, and trackable over time.</em></p>
+
+<h3>S1: Onboarding & Setup Survey</h3>
+<table>
+<tr><th style="width:30px">#</th><th>Question</th><th style="width:120px">Type</th><th style="width:180px">What it measures</th></tr>
+<tr><td>1</td><td><strong>How clear were the first steps to get your event set up on the platform?</strong></td><td>Score 1–10</td><td>Onboarding clarity — feeds KR4 (reduce onboarding time)</td></tr>
+<tr><td>2</td><td><strong>What percentage of the setup did you do yourself vs. your TAM?</strong></td><td>% split (slider or dropdown: 0/100, 25/75, 50/50, 75/25, 100/0)</td><td>Self-service ratio — feeds KR2 (reduce setup effort)</td></tr>
+<tr><td>3</td><td><strong>Which area of the admin panel was hardest to figure out?</strong></td><td>Multi-choice (Website Builder / Registration / Exhibitor Mgmt / Sessions / User Access / Reporting / Other)</td><td>Admin panel friction areas — feeds product analytics + quick wins</td></tr>
+<tr><td>4</td><td><strong>How confident do you feel managing the platform independently?</strong></td><td>Score 1–10</td><td>Organiser independence — tracks over time</td></tr>
+<tr><td>5</td><td><strong>What's one thing that would have made getting started easier?</strong></td><td>Open text</td><td>Qualitative — uncovers blind spots</td></tr>
+</table>
+
+<h3>S2: Pre-Event Survey</h3>
+<table>
+<tr><th style="width:30px">#</th><th>Question</th><th style="width:120px">Type</th><th style="width:180px">What it measures</th></tr>
+<tr><td>1</td><td><strong>How much of your event configuration have you been able to do without TAM support?</strong></td><td>Score 1–10</td><td>Self-service at scale — tracks improvement over time</td></tr>
+<tr><td>2</td><td><strong>Which platform task is taking you the most time right now?</strong></td><td>Multi-choice (same list as S1 Q3)</td><td>Current friction area — real-time signal for product team</td></tr>
+<tr><td>3</td><td><strong>In the last month, how many times did you contact support for something you felt you should be able to do yourself?</strong></td><td>Number (0, 1–2, 3–5, 5+)</td><td>Support dependency — feeds KR3 (reduce support tickets)</td></tr>
+<tr><td>4</td><td><strong>How satisfied are you with the platform so far for this event?</strong></td><td>Score 1–10</td><td>Mid-cycle CSAT — early warning system</td></tr>
+<tr><td>5</td><td><strong>What's the one thing you wish the platform did automatically for you?</strong></td><td>Open text</td><td>Automation opportunities — feeds KR1</td></tr>
+</table>
+
+<h3>S3: Post-Event Survey</h3>
+<table>
+<tr><th style="width:30px">#</th><th>Question</th><th style="width:120px">Type</th><th style="width:180px">What it measures</th></tr>
+<tr><td>1</td><td><strong>Overall, how would you rate your experience using ExpoPlatform for this event?</strong></td><td>Score 1–10</td><td>Post-event CSAT — the money metric</td></tr>
+<tr><td>2</td><td><strong>Did the platform meet your expectations for this event?</strong></td><td>Yes / Partially / No</td><td>Expectation gap — simple, powerful</td></tr>
+<tr><td>3</td><td><strong>What was your biggest frustration during this event cycle?</strong></td><td>Open text</td><td>Top pain point — qualitative, comparable across clients</td></tr>
+<tr><td>4</td><td><strong>How likely are you to recommend ExpoPlatform to another organiser?</strong></td><td>Score 0–10 (NPS)</td><td>NPS — industry standard, feeds OKR 3 CSAT target</td></tr>
+<tr><td>5</td><td><strong>What would move that score up?</strong></td><td>Open text</td><td>Highest-impact improvement — ties NPS to action</td></tr>
+</table>
+
+<h3>S4: Renewal / Annual Survey</h3>
+<table>
+<tr><th style="width:30px">#</th><th>Question</th><th style="width:120px">Type</th><th style="width:180px">What it measures</th></tr>
+<tr><td>1</td><td><strong>Compared to when you started using ExpoPlatform, has the platform gotten better, stayed the same, or gotten worse?</strong></td><td>Better / Same / Worse</td><td>Trajectory perception — retention signal</td></tr>
+<tr><td>2</td><td><strong>Which product area should we invest in most for organisers like you?</strong></td><td>Multi-choice (Website Builder / Registration / Meetings & Networking / Exhibitor Tools / Reporting & Analytics / Mobile App)</td><td>Product investment signal — feeds roadmap + sponsorship conversations</td></tr>
+<tr><td>3</td><td><strong>How well do you feel ExpoPlatform understands your needs as an organiser?</strong></td><td>Score 1–10</td><td>Relationship health — retention predictor</td></tr>
+<tr><td>4</td><td><strong>Is there a feature or tool you're paying for elsewhere that you wish ExpoPlatform offered?</strong></td><td>Open text</td><td>Competitive intel + upsell opportunity — feeds Barry/Oriana</td></tr>
+<tr><td>5</td><td><strong>What's the ONE thing that would make you renew without hesitation?</strong></td><td>Open text</td><td>Retention lever — the most important question at renewal</td></tr>
+</table>
+
+<h2>4. Form Tool — Research & Recommendation</h2>
+<p>You need a tool that: (a) is quick to fill, (b) exports data cleanly for analysis, (c) can be embedded or linked easily, (d) ideally integrates with your dashboard/OKR tracking.</p>
+
+<table>
+<tr><th>Tool</th><th>Pros</th><th>Cons</th><th>Cost</th><th>Verdict</th></tr>
+<tr><td><strong>Google Forms</strong></td><td>Free, everyone knows it, auto-collects in Google Sheets, easy to share</td><td>Limited design, no conditional logic on free tier, no API for dashboards</td><td>Free</td><td><span class="tag-green tag">Good for Phase 1</span></td></tr>
+<tr><td><strong>Typeform</strong></td><td>Beautiful UX, conditional logic, API for dashboard integration, conversational format</td><td>Paid, company account needed (you already discussed with Susan)</td><td>~$25/mo</td><td><span class="tag tag-orange">Best for Phase 2</span></td></tr>
+<tr><td><strong>Tally.so</strong></td><td>Free (unlimited forms), Notion-like interface, conditional logic, integrations (Zapier, webhooks), embeddable</td><td>Less known, no PlanHat integration natively</td><td>Free (Pro $29/mo)</td><td><span class="tag-green tag">Strong alternative</span></td></tr>
+<tr><td><strong>PlanHat custom forms</strong></td><td>Data stays in CRM, linked to client record, AI analysis built-in</td><td>Susan needs to check if this capability exists — unknown</td><td>Included</td><td><span class="tag tag-orange">Check with Susan</span></td></tr>
+<tr><td><strong>Router.so</strong></td><td>Developer-focused form handler and lead router</td><td><strong>NOT a survey tool</strong> — no conditional logic, no survey analytics dashboard, no response visualisation. Designed for routing form submissions to sales reps, not collecting structured feedback.</td><td>Free tier available</td><td><span class="tag-red tag">Not suitable</span></td></tr>
+</table>
+
+<blockquote>
+<strong>Recommendation:</strong> Start with <strong>Tally.so</strong> (free tier). It has conditional logic, clean export to Google Sheets, Notion-like editing, embeddable links, and webhook integrations — all features Google Forms lacks. It's free for unlimited forms and responses. Move to <strong>PlanHat</strong> long-term if Susan confirms it has survey/custom form capability (keeps data in CRM, linked to client records). <strong>Router.so is not suitable</strong> — it's a developer-focused lead routing tool, not a survey platform.
+</blockquote>
+
+<h3>Action: Form Tool Evaluation</h3>
+<table>
+<tr><th>Step</th><th>Owner</th><th>Due</th></tr>
+<tr><td>Create Phase 1 survey in Tally.so (S3: Post-Event — start here)</td><td>Ilaria</td><td>W/C 31 Mar</td></tr>
+<tr><td>Ask Susan to check PlanHat custom form/survey capabilities</td><td>Ilaria</td><td>W/C 31 Mar</td></tr>
+<tr><td>Test Tally.so: create S3 survey, verify export to Google Sheets + shareable link</td><td>Ilaria</td><td>W/C 7 Apr</td></tr>
+<tr><td>Decide long-term tool: stay on Tally.so or migrate to PlanHat</td><td>Ilaria + Susan</td><td>End of April</td></tr>
+</table>
+
+<h2>5. Full Project Plan — Phased Rollout</h2>
+
+<div class="phase">
+<div class="phase-title">Phase 0: Pilot & Prove (NOW — April 2026)</div>
+<table>
+<tr><th style="width:30px">#</th><th>Task</th><th style="width:100px">Owner</th><th style="width:120px">Due</th></tr>
+<tr><td>0.1</td><td>Run Stef interview (today!) — first organiser data point</td><td>Ilaria</td><td>27 Mar</td></tr>
+<tr><td>0.2</td><td>Process Stef's feedback: scores, pain points, journey map updates</td><td>Ilaria</td><td>28 Mar</td></tr>
+<tr><td>0.3</td><td>Refine interview questions based on what worked/didn't with Stef</td><td>Ilaria</td><td>31 Mar</td></tr>
+<tr><td>0.4</td><td>Run 2nd organiser interview (pick a different client profile — new vs. repeat, different region)</td><td>Ilaria</td><td>W/C 7 Apr</td></tr>
+<tr><td>0.5</td><td>Compare both interviews — identify patterns vs. one-offs</td><td>Ilaria</td><td>W/C 7 Apr</td></tr>
+<tr><td>0.6</td><td>Share pilot findings with Susan, Taimoor, Ajay — get buy-in for Phase 1</td><td>Ilaria</td><td>W/C 14 Apr</td></tr>
+</table>
+</div>
+
+<div class="phase">
+<div class="phase-title">Phase 1: Standardise & Launch (April — May 2026)</div>
+<table>
+<tr><th style="width:30px">#</th><th>Task</th><th style="width:100px">Owner</th><th style="width:120px">Due</th></tr>
+<tr><td>1.1</td><td>Finalise the 4 survey question sets (S1–S4) — get sign-off from Product (Taimoor), Sales (Barry/Oriana), and Ops (Susan)</td><td>Ilaria</td><td>W/C 14 Apr</td></tr>
+<tr><td>1.2</td><td>Build the 4 surveys in chosen form tool (start with Google Forms)</td><td>Ilaria</td><td>W/C 21 Apr</td></tr>
+<tr><td>1.3</td><td>Create a simple "Survey Trigger Guide" for TAMs: when to send which survey, how to fill it on a call, where data goes</td><td>Ilaria</td><td>W/C 21 Apr</td></tr>
+<tr><td>1.4</td><td>Brief TAM leads (Jonathan, Yuri, Shafa) on the process — 15 min walkthrough</td><td>Ilaria</td><td>W/C 28 Apr</td></tr>
+<tr><td>1.5</td><td>Launch S3 (Post-Event) survey first — target 5 clients in first month</td><td>TAMs</td><td>May 2026</td></tr>
+<tr><td>1.7</td><td>Set up Fathom "Ask Fathom" searches for the same questions (Susan agreed to this — send her the questions)</td><td>Ilaria + Susan</td><td>W/C 28 Apr</td></tr>
+</table>
+</div>
+
+<div class="phase">
+<div class="phase-title">Phase 2: Scale & Integrate (June — August 2026)</div>
+<table>
+<tr><th style="width:30px">#</th><th>Task</th><th style="width:100px">Owner</th><th style="width:120px">Due</th></tr>
+<tr><td>2.1</td><td>Review first month of survey data — are we getting enough responses? Are questions working?</td><td>Ilaria</td><td>June 2026</td></tr>
+<tr><td>2.2</td><td>Launch S1 (Onboarding) and S2 (Pre-Event) surveys</td><td>TAMs</td><td>June 2026</td></tr>
+<tr><td>2.3</td><td>Migrate to Typeform/Tally or PlanHat if Google Forms is limiting</td><td>Ilaria</td><td>June 2026</td></tr>
+<tr><td>2.4</td><td>Connect survey data to OKR dashboard (API from form tool → dashboard)</td><td>Ilaria + Mikita</td><td>July 2026</td></tr>
+<tr><td>2.5</td><td>Launch S4 (Renewal) survey — TAMs coordinate timing per client around renewal</td><td>TAMs</td><td>As renewals come up</td></tr>
+<tr><td>2.6</td><td>First quarterly report: "Organiser Voice" — summarise all survey data, trends, top pain points, product recommendations</td><td>Ilaria</td><td>Aug 2026</td></tr>
+</table>
+</div>
+
+<div class="phase">
+<div class="phase-title">Phase 3: Embed in Platform (Q4 2026+)</div>
+<table>
+<tr><th style="width:30px">#</th><th>Task</th><th style="width:100px">Owner</th><th style="width:120px">Due</th></tr>
+<tr><td>3.1</td><td>Evaluate admin panel popup surveys (Taimoor's Phase 2 from feedback epic) — contextual micro-surveys based on which area organiser is using</td><td>Ilaria + Taimoor</td><td>Q4 2026</td></tr>
+<tr><td>3.2</td><td>Integrate survey responses with Mixpanel/Posthog tracking data — correlate satisfaction scores with actual usage patterns</td><td>Ilaria + Data team</td><td>Q4 2026</td></tr>
+<tr><td>3.3</td><td>Automate the "Organiser Voice" quarterly report using dashboard + AI summary</td><td>Ilaria</td><td>Q4 2026</td></tr>
+</table>
+</div>
+
+<h2>6. How This Connects to Everything</h2>
+
+<table>
+<tr><th>This project feeds...</th><th>How</th></tr>
+<tr><td><span class="tag">OKR 4 KR1</span> Reduce manual process time ≥50%</td><td>Survey Q "What takes too long?" + "What would you automate?" → identifies automation targets</td></tr>
+<tr><td><span class="tag">OKR 4 KR2</span> Reduce event setup effort ≥40%</td><td>Survey Q "Self-service ratio" + "Hardest admin panel area" → tracks improvement over time</td></tr>
+<tr><td><span class="tag">OKR 4 KR3</span> Decrease support tickets ≥30%</td><td>Survey Q "How many times did you contact support?" → baseline + tracking</td></tr>
+<tr><td><span class="tag">OKR 4 KR4</span> Reduce onboarding time ≥35%</td><td>S1 survey captures onboarding clarity + confidence → measures improvement</td></tr>
+<tr><td><span class="tag">OKR 3</span> Platform CSAT ≥ 8.5/10</td><td>S3 NPS score + satisfaction scores → direct CSAT measurement</td></tr>
+<tr><td><span class="tag">Product</span> Taimoor's feedback epic</td><td>Phase 0 = your interview questions (Phase 1 of his epic). Phase 3 = admin panel popups (Phase 2 of his epic)</td></tr>
+<tr><td><span class="tag">Product</span> Mixpanel tracking plan</td><td>Stef's step-by-step admin panel flow → informs what to track in Mixpanel</td></tr>
+<tr><td><span class="tag">Product</span> Roadmap prioritisation</td><td>S4 "Which area should we invest in?" → direct signal for Ajay's roadmap</td></tr>
+<tr><td><span class="tag">Sales</span> Sponsorship opportunities</td><td>S4 "Feature you pay for elsewhere?" → competitive intel for Barry/Oriana</td></tr>
+<tr><td><span class="tag">Fathom</span> Ask Fathom searches</td><td>Same questions set up as Fathom searches → two data streams (structured form + unstructured call analysis)</td></tr>
+<tr><td><span class="tag">End-to-end journey</span> HTML map</td><td>Every survey response maps to a journey step → pain points populate the journey map</td></tr>
+</table>
+
+<h2>7. Key Decisions Needed</h2>
+
+<table>
+<tr><th>Decision</th><th>Who decides</th><th>When</th></tr>
+<tr><td>Final approval on the 4 question sets (do Product/Sales want to add or change any?)</td><td>Ilaria + Taimoor + Barry + Susan</td><td>W/C 14 Apr</td></tr>
+<tr><td>Form tool: Tally.so confirmed for Phase 1 — migrate to PlanHat if it has survey capability?</td><td>Ilaria + Susan</td><td>End of April</td></tr>
+<tr><td>Does PlanHat have survey/custom form capability?</td><td>Susan to check</td><td>W/C 31 Mar</td></tr>
+<tr><td>Who triggers each survey? TAM leads need to agree to add this to their process (TAMs own all survey touchpoints — no RM involvement)</td><td>Ilaria + Jonathan/Yuri/Shafa</td><td>W/C 28 Apr</td></tr>
+</table>
+
+</body>
+</html>
