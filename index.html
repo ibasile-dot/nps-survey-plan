@@ -28,20 +28,9 @@
   .tag-green { background: #e6f4ea; color: #1e7e34; }
   .tag-orange { background: #fff3e0; color: #e65100; }
   .callout { background: #fff9c4; border-left: 4px solid #f9a825; padding: 10px 14px; margin: 12px 0; font-size: 13px; }
-  .callout-green { background: #e8f5e9; border-left-color: #43a047; }
+  .callout-blue { background: #e8f0fe; border-left-color: #0066cc; }
   .card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px 18px; margin: 12px 0; }
   .card-title { font-size: 14px; font-weight: 600; color: #0066cc; margin-bottom: 6px; }
-  .tf-survey { background: #fff; border: 1px solid #ddd; border-radius: 8px; margin: 16px 0; overflow: hidden; }
-  .tf-header { background: #1a1a2e; color: white; padding: 12px 16px; }
-  .tf-header h3 { color: white; margin: 0; font-size: 14px; }
-  .tf-header .tf-meta { font-size: 11px; opacity: 0.8; margin-top: 2px; }
-  .tf-body { padding: 14px 16px; }
-  .tf-q { border-bottom: 1px solid #eee; padding: 10px 0; }
-  .tf-q:last-child { border-bottom: none; }
-  .tf-q-num { font-weight: 700; color: #0066cc; font-size: 12px; }
-  .tf-q-text { font-weight: 600; margin: 2px 0; }
-  .tf-q-type { font-size: 11px; color: #888; }
-  .tf-q-options { font-size: 12px; color: #555; margin-top: 2px; }
 </style>
 </head>
 <body>
@@ -53,8 +42,7 @@
 
 <div class="tab-bar">
   <button class="tab-btn active" onclick="showTab('plan')">Survey Plan</button>
-  <button class="tab-btn" onclick="showTab('typeform')">Typeform Surveys</button>
-  <button class="tab-btn" onclick="showTab('framework')">RM Playbook</button>
+  <button class="tab-btn" onclick="showTab('playbook')">RM Playbook</button>
   <button class="tab-btn" onclick="showTab('analysis')">Analysis &amp; Tracking</button>
   <button class="tab-btn" onclick="showTab('next')">Next Steps</button>
 </div>
@@ -63,32 +51,53 @@
 <div id="plan" class="tab-content active">
 
 <h2>1. What we're solving</h2>
-<p>No structured feedback loop from organisers. No NPS baseline. No comparable data across clients. Post-event surveys sent by email historically failed (low response). We need measurable data that feeds product decisions, retention strategy, and OKR tracking.</p>
+<p>No structured feedback loop from organisers. No NPS baseline. No comparable data across clients. We need measurable data that feeds product decisions, retention strategy, and OKR tracking — and a monthly understanding of progress, not just a yearly one.</p>
 
-<h2>2. What we agreed (March 18 &amp; April 10)</h2>
-<ul>
-  <li>Structured surveys at key points in the event cycle — same questions across all clients for comparable data</li>
-  <li><strong>RM-led</strong> — clients are more honest with RMs than TAMs. RM sends the link; if not completed in 7 days, walks through it on the next call</li>
-  <li>Questions agreed with the product team — product-specific insights that drive improvements</li>
-  <li>Surveys sit in PlanHat as tasks per event — RMs adjust dates or skip with a reason. Flexible, not automated</li>
-  <li>Typeform for collection (Mykyta approved), Google Sheets for analysis, PlanHat for tracking</li>
-</ul>
-
-<h2>3. Three surveys</h2>
-<p>Based on Barry and Oriana's feedback (April 10): merged the original onboarding and pre-event surveys (the overlap was too large for first-time clients), and reframed the renewal survey as an annual review focused on the overall relationship — not tied to renewal timing. Each survey: 5 questions, ~3 minutes.</p>
+<h2>2. Three surveys</h2>
+<p>Based on feedback from Barry and Oriana (April 10): merged the onboarding and pre-event surveys (for first-time clients these overlap), and reframed the renewal survey as an annual review. Each survey: 5 questions, ~3 minutes. All built in Typeform, auto-connected to <a href="https://docs.google.com/spreadsheets/d/1p6y7JLoov6UYXZbZMaOYAP6Gk555tNun738HGZ_FdGM/edit" target="_blank">Google Sheets</a>.</p>
 
 <table>
-<tr><th>#</th><th>Survey</th><th>When</th><th>Purpose</th><th>Typeform</th></tr>
-<tr><td>S1</td><td><strong>Setup &amp; Configuration</strong></td><td>2-4 weeks after kickoff / once organiser has started configuring</td><td>Captures onboarding experience, self-service level, platform friction areas. Critical for new clients — shows we're proactive and listening (Barry).</td><td><a href="https://form.typeform.com/to/ntQj2K3c" target="_blank">Open survey</a></td></tr>
-<tr><td>S2</td><td><strong>Post-Event</strong></td><td>Between event end and debrief/wash-up call</td><td>Core survey. NPS, overall satisfaction, product and service feedback. Feeds into the debrief call structure — results can be discussed during the wash-up.</td><td><a href="https://form.typeform.com/to/UuBpDwTY" target="_blank">Open survey</a></td></tr>
-<tr><td>S3</td><td><strong>Annual Review</strong></td><td>Once per year — RM decides timing based on relationship</td><td>Strategic view: platform trajectory, investment priorities, competitive gaps. Positioned as understanding the overall relationship, not a renewal conversation.</td><td><a href="https://form.typeform.com/to/qT4zvu8q" target="_blank">Open survey</a></td></tr>
+<tr><th>#</th><th>Survey</th><th>When</th><th>Typeform</th></tr>
+<tr><td>S1</td><td><strong>Setup &amp; Configuration</strong></td><td>2-4 weeks after kickoff</td><td><a href="https://form.typeform.com/to/ntQj2K3c" target="_blank">Open survey</a></td></tr>
+<tr><td>S2</td><td><strong>Post-Event</strong></td><td>Between event end and debrief call</td><td><a href="https://form.typeform.com/to/UuBpDwTY" target="_blank">Open survey</a></td></tr>
+<tr><td>S3</td><td><strong>Annual Review</strong></td><td>Once per year — RM decides timing</td><td><a href="https://form.typeform.com/to/qT4zvu8q" target="_blank">Open survey</a></td></tr>
 </table>
 
-<div class="callout">
-  <strong>Why 3 surveys, not 4:</strong> Barry and Oriana confirmed that for first-time clients, onboarding and pre-event are the same phase. Merging avoids survey fatigue. The annual review is separate because those strategic questions don't fit naturally right after an event — they need distance and a broader perspective.
+<h2>3. How it works</h2>
+<ol>
+  <li><strong>PlanHat task triggers</strong> — Based on event date, PlanHat creates a task for the RM. RMs can adjust dates or postpone with a reason.</li>
+  <li><strong>RM sends Typeform link 7 days before the relevant call</strong> — Gives the organiser time to complete it independently.</li>
+  <li><strong>If not completed by the call</strong> — RM walks through the survey on screen in the first 5 minutes.</li>
+  <li><strong>Data flows automatically</strong> — Typeform &rarr; <a href="https://docs.google.com/spreadsheets/d/1p6y7JLoov6UYXZbZMaOYAP6Gk555tNun738HGZ_FdGM/edit" target="_blank">Google Sheet Dashboard</a> (NPS, CSAT, friction areas all auto-calculated).</li>
+</ol>
+
+<p><strong>Why RM-led:</strong> Clients are more honest with RMs than TAMs. Historical email surveys consistently failed. This approach uses the existing relationship and call schedule.</p>
+
+<h2>4. Two plans: one-event vs multi-event</h2>
+
+<div class="card">
+  <div class="card-title">Plan A: One-event clients</div>
+  <table>
+  <tr><th>Survey</th><th>When</th><th>Suggested timing</th></tr>
+  <tr><td>S1: Setup &amp; Configuration</td><td>After kickoff</td><td>2-4 weeks after kickoff — <em>Barry &amp; Oriana: does this timing work? When is there enough interaction for feedback?</em></td></tr>
+  <tr><td>S2: Post-Event</td><td>After event</td><td>Send 7 days before the wash-up/debrief call — <em>Barry &amp; Oriana: how long after event end do you usually schedule the debrief?</em></td></tr>
+  <tr><td>S3: Annual Review</td><td>Once per year</td><td>RM decides — <em>Barry &amp; Oriana: when in the year does this feel natural? Around contract anniversary?</em></td></tr>
+  </table>
 </div>
 
-<h2>4. Questions</h2>
+<div class="card">
+  <div class="card-title">Plan B: Multi-event clients (e.g. Informa, Hive)</div>
+  <table>
+  <tr><th>Survey</th><th>When</th><th>Suggested timing</th></tr>
+  <tr><td>S1: Setup &amp; Configuration</td><td>First event only</td><td>Only when there's a new/significant setup — <em>Barry &amp; Oriana: agree?</em></td></tr>
+  <tr><td>S2: Post-Event</td><td>After seasonal debrief</td><td>Not after every single event — aligned with seasonal reviews — <em>Barry &amp; Oriana: when do seasonal debriefs happen for your key clients?</em></td></tr>
+  <tr><td>S3: Annual Review</td><td>Once per year</td><td>Same as Plan A — <em>RM decides timing</em></td></tr>
+  </table>
+</div>
+
+<h2>5. Questions</h2>
+
+<p>Each survey starts with: Company name, Event name, Respondent name, Role. Then 5 questions:</p>
 
 <h3>S1: Setup &amp; Configuration</h3>
 <table>
@@ -113,171 +122,59 @@
 <h3>S3: Annual Review</h3>
 <table>
 <tr><th>#</th><th>Question</th><th>Type</th><th>Measures</th></tr>
-<tr><td>1</td><td>Compared to when you started using ExpoPlatform, has the platform gotten better, stayed the same, or gotten worse?</td><td>Better / Same / Worse</td><td>Trajectory perception</td></tr>
+<tr><td>1</td><td>Compared to when you started using ExpoPlatform, has the platform gotten better, stayed the same, or gotten worse?</td><td>Better / Same / Worse</td><td>Trajectory</td></tr>
 <tr><td>2</td><td>Which product area should we invest in most for organisers like you?</td><td>Multi-choice</td><td>Investment signal</td></tr>
 <tr><td>3</td><td>How closely did the platform deliver on your original vision when you chose ExpoPlatform?</td><td>Score 1-10</td><td>Expectation vs reality</td></tr>
 <tr><td>4</td><td>Is there a feature or tool you're paying for elsewhere that you wish ExpoPlatform offered?</td><td>Open text</td><td>Competitive intel</td></tr>
 <tr><td>5</td><td>What's the ONE thing that would make you renew without hesitation?</td><td>Open text</td><td>Retention lever</td></tr>
 </table>
 
-<h2>5. Two plans: one-event vs multi-event clients</h2>
-<p>Not one-size-fits-all — the survey cycle depends on the client's event portfolio. Both plans use the same 3 surveys but with different timing and frequency.</p>
-
-<div class="card">
-  <div class="card-title">Plan A: One-event clients</div>
-  <table>
-  <tr><th>Survey</th><th>When</th><th>Notes</th></tr>
-  <tr><td>S1: Setup &amp; Configuration</td><td>2-4 weeks after kickoff</td><td>Always send for new clients. For returning clients, send only if significant new setup.</td></tr>
-  <tr><td>S2: Post-Event</td><td>Between event end and debrief call</td><td>Always send. Can feed into the wash-up conversation.</td></tr>
-  <tr><td>S3: Annual Review</td><td>Once per year — RM decides timing</td><td>Not tied to renewal date. RM sends when the relationship timing is right.</td></tr>
-  </table>
-</div>
-
-<div class="card">
-  <div class="card-title">Plan B: Multi-event clients (e.g. Informa, Hive)</div>
-  <table>
-  <tr><th>Survey</th><th>When</th><th>Notes</th></tr>
-  <tr><td>S1: Setup &amp; Configuration</td><td>First event only, or significant new setup</td><td>Don't repeat for every event — only when there's a meaningful new onboarding.</td></tr>
-  <tr><td>S2: Post-Event</td><td>After seasonal debrief (not every single event)</td><td>Aligned with the RM's existing seasonal review schedule (e.g. Oriana's Informa plan: seasonal debriefs, not per-event).</td></tr>
-  <tr><td>S3: Annual Review</td><td>Once per year — aligned with contract cycle</td><td>Same as Plan A. RM decides when it feels natural.</td></tr>
-  </table>
-  <p><strong>Barry &amp; Oriana to advise:</strong> For your key multi-event clients, when do the seasonal debriefs happen? This determines when S2 gets sent.</p>
-</div>
-
-<h2>6. Delivery flow</h2>
-<ol>
-  <li><strong>PlanHat task</strong> — Based on event date, PlanHat creates a task for the RM. RM can adjust the date or skip with a reason.</li>
-  <li><strong>RM sends Typeform link</strong> — Via email after the relevant call or milestone.</li>
-  <li><strong>7-day window</strong> — If not completed, PlanHat reminds the RM.</li>
-  <li><strong>Fallback</strong> — RM walks through the survey on the next call (screen share, first 5 minutes).</li>
-  <li><strong>Data flows automatically</strong> — Typeform &rarr; Google Sheet &rarr; Dashboard. No manual entry.</li>
-</ol>
-
-<h2>7. How this connects</h2>
+<h2>6. How this connects</h2>
 <table>
 <tr><th>Feeds into</th><th>How</th></tr>
 <tr><td><span class="tag">OKR 3</span> Platform CSAT &ge; 8.5/10</td><td>S2 NPS + satisfaction scores = direct measurement</td></tr>
 <tr><td><span class="tag">OKR 4</span> Reduce manual processes</td><td>S1 self-service level + friction areas = signal for what to improve</td></tr>
-<tr><td><span class="tag">Product</span> Roadmap</td><td>Open-text feedback routes to Taimoor/AJ. S3 investment question = direct roadmap input</td></tr>
+<tr><td><span class="tag">Product</span> Roadmap</td><td>Open-text feedback routes to product. S3 investment question = direct roadmap input</td></tr>
 <tr><td><span class="tag">Sales</span> Retention</td><td>NPS + trajectory + competitive gaps = early warning system</td></tr>
 <tr><td><span class="tag">PlanHat</span> Health scores</td><td>Survey scores feed client health score alongside usage data</td></tr>
 </table>
 
-<h2>8. Jira stories</h2>
-<table>
-<tr><th>Story</th><th>Summary</th><th>Status</th></tr>
-<tr><td><a href="https://expoplatform.atlassian.net/browse/EP-50877" target="_blank">EP-50877</a></td><td>Post-event NPS email</td><td>To Do</td></tr>
-<tr><td><a href="https://expoplatform.atlassian.net/browse/EP-50878" target="_blank">EP-50878</a></td><td>Onboarding NPS</td><td>To Do</td></tr>
-<tr><td><a href="https://expoplatform.atlassian.net/browse/EP-50879" target="_blank">EP-50879</a></td><td>No-login feedback page</td><td>To Do</td></tr>
-</table>
-
 </div>
 
-<!-- ==================== TAB 2: TYPEFORM SURVEYS ==================== -->
-<div id="typeform" class="tab-content">
-
-<h2>Live Typeform Surveys</h2>
-<p>3 surveys, all live with ExpoPlatform branding and hidden fields. Each survey starts with 4 intro questions (Company, Event, Name, Role) followed by 5 survey questions.</p>
-
-<h3>Links</h3>
-<table>
-<tr><th>Survey</th><th>Typeform</th><th>Status</th></tr>
-<tr><td>S1: Setup &amp; Configuration</td><td><a href="https://form.typeform.com/to/ntQj2K3c" target="_blank">form.typeform.com/to/ntQj2K3c</a></td><td><span class="tag-orange tag">Updating</span></td></tr>
-<tr><td>S2: Post-Event</td><td><a href="https://form.typeform.com/to/UuBpDwTY" target="_blank">form.typeform.com/to/UuBpDwTY</a></td><td><span class="tag-green tag">Live</span></td></tr>
-<tr><td>S3: Annual Review</td><td><a href="https://form.typeform.com/to/qT4zvu8q" target="_blank">form.typeform.com/to/qT4zvu8q</a></td><td><span class="tag-orange tag">Updating</span></td></tr>
-</table>
-
-<h3>Hidden fields (all surveys)</h3>
-<table>
-<tr><th>Field</th><th>Purpose</th><th>URL parameter</th></tr>
-<tr><td><code>client_name</code></td><td>Organiser company</td><td><code>?client_name=Informa</code></td></tr>
-<tr><td><code>event_name</code></td><td>Specific event</td><td><code>&amp;event_name=RetailX</code></td></tr>
-<tr><td><code>rm_name</code></td><td>Which RM sent it</td><td><code>&amp;rm_name=Barry</code></td></tr>
-<tr><td><code>event_stage</code></td><td>S1/S2/S3</td><td><code>&amp;event_stage=S2</code></td></tr>
-</table>
-
-<h3>Google Sheets connection</h3>
-<p>All responses automatically flow to: <a href="https://docs.google.com/spreadsheets/d/1p6y7JLoov6UYXZbZMaOYAP6Gk555tNun738HGZ_FdGM/edit" target="_blank">NPS Survey Data — ExpoPlatform</a></p>
-<p>Tabs: S1 Data, S2 Data, S3 Data, Dashboard (auto-calculated NPS/CSAT), RM Links (pre-built URLs per client).</p>
-
-<!-- S1 -->
-<div class="tf-survey">
-  <div class="tf-header">
-    <h3>S1: Setup &amp; Configuration</h3>
-    <div class="tf-meta">Trigger: 2-4 weeks after kickoff &nbsp;|&nbsp; ~3 min</div>
-  </div>
-  <div class="tf-body">
-    <div class="tf-q"><div class="tf-q-num">Q1</div><div class="tf-q-text">How easy was it to get started with the platform?</div><div class="tf-q-type">Opinion Scale 1-10 &nbsp;|&nbsp; Very Difficult → Very Easy</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q2</div><div class="tf-q-text">How much of the setup/configuration have you been able to do without TAM support?</div><div class="tf-q-type">Opinion Scale 1-10 &nbsp;|&nbsp; Needed TAM for everything → Did it all myself</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q3</div><div class="tf-q-text">Which area of the admin panel was hardest to figure out?</div><div class="tf-q-type">Multiple Choice (multi-select) &nbsp;|&nbsp; Website Builder, Registration, Exhibitor Mgmt, Sessions, User Access, Reporting, Other</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q4</div><div class="tf-q-text">How satisfied are you with the platform so far?</div><div class="tf-q-type">Opinion Scale 1-10 &nbsp;|&nbsp; Very dissatisfied → Very satisfied</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q5</div><div class="tf-q-text">What's the one thing that would make the setup easier or that you wish the platform did automatically?</div><div class="tf-q-type">Long Text</div></div>
-  </div>
-</div>
-
-<!-- S2 -->
-<div class="tf-survey">
-  <div class="tf-header">
-    <h3>S2: Post-Event</h3>
-    <div class="tf-meta">Trigger: between event end and debrief call &nbsp;|&nbsp; ~3 min &nbsp;|&nbsp; <strong>Core survey — always send</strong></div>
-  </div>
-  <div class="tf-body">
-    <div class="tf-q"><div class="tf-q-num">Q1</div><div class="tf-q-text">Overall, how would you rate your experience using ExpoPlatform for this event?</div><div class="tf-q-type">Opinion Scale 1-10 &nbsp;|&nbsp; Terrible → Excellent</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q2</div><div class="tf-q-text">Did the platform meet your expectations for this event?</div><div class="tf-q-type">Multiple Choice &nbsp;|&nbsp; Yes / Partially / No</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q3</div><div class="tf-q-text">How likely are you to recommend ExpoPlatform to another organiser?</div><div class="tf-q-type">NPS 0-10 &nbsp;|&nbsp; Built-in Typeform NPS block</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q4</div><div class="tf-q-text">What's your top suggestion for product improvement?</div><div class="tf-q-type">Long Text</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q5</div><div class="tf-q-text">What's your top suggestion for support/service improvement?</div><div class="tf-q-type">Long Text</div></div>
-  </div>
-</div>
-
-<!-- S3 -->
-<div class="tf-survey">
-  <div class="tf-header">
-    <h3>S3: Annual Review</h3>
-    <div class="tf-meta">Trigger: once per year — RM decides timing &nbsp;|&nbsp; ~3 min</div>
-  </div>
-  <div class="tf-body">
-    <div class="tf-q"><div class="tf-q-num">Q1</div><div class="tf-q-text">Compared to when you started using ExpoPlatform, has the platform gotten better, stayed the same, or gotten worse?</div><div class="tf-q-type">Multiple Choice &nbsp;|&nbsp; Better / Stayed the same / Worse</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q2</div><div class="tf-q-text">Which product area should we invest in most for organisers like you?</div><div class="tf-q-type">Multiple Choice (multi-select) &nbsp;|&nbsp; Website Builder, Registration, Meetings &amp; Networking, Exhibitor Tools, Reporting &amp; Analytics, Mobile App</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q3</div><div class="tf-q-text">How closely did the platform deliver on your original vision when you chose ExpoPlatform?</div><div class="tf-q-type">Opinion Scale 1-10 &nbsp;|&nbsp; Not at all → Exceeded expectations</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q4</div><div class="tf-q-text">Is there a feature or tool you're paying for elsewhere that you wish ExpoPlatform offered?</div><div class="tf-q-type">Long Text</div></div>
-    <div class="tf-q"><div class="tf-q-num">Q5</div><div class="tf-q-text">What's the ONE thing that would make you renew without hesitation?</div><div class="tf-q-type">Long Text</div></div>
-  </div>
-</div>
-
-</div>
-
-<!-- ==================== TAB 3: RM PLAYBOOK ==================== -->
-<div id="framework" class="tab-content">
+<!-- ==================== TAB 2: RM PLAYBOOK ==================== -->
+<div id="playbook" class="tab-content">
 
 <h2>RM Strategy Call Playbook</h2>
-<p>Best-practice conversation prompts for strategy calls. Not a script — a resource to draw from when it fits the conversation. Barry described this as a "relationship management playbook" that future RMs can also use.</p>
-<p>These are <strong>different from the survey questions</strong>. The survey captures scores. These go deeper — conversational follow-ups that give context behind the numbers.</p>
+<p>A best-practice resource for strategy calls — not a script. Conversation prompts to draw from when the moment is right. These are different from the survey questions: the survey captures scores, these go deeper.</p>
+
+<div class="callout-blue callout">
+  <strong>Why this matters:</strong> Having structured, comparable feedback across all clients gives us a monthly understanding of progress — not just a yearly one. This is critical for OKR 3 (CSAT target) and for Tanya's visibility into how the platform is tracking. Every data point counts. The more consistent the feedback, the faster we can act on it.
+</div>
 
 <table>
-<tr><th>Stage</th><th>Survey asks (scores)</th><th>Call goes deeper (conversation)</th></tr>
-<tr><td><strong>Setup / Onboarding</strong></td><td>How easy was it to get started? (1-10)</td><td>
+<tr><th>Stage</th><th>Conversation prompts (pick 2-3)</th></tr>
+<tr><td><strong>Setup / Onboarding</strong></td><td>
   <ul>
     <li>Walk me through how you approached the setup — what did you tackle first?</li>
     <li>When you got stuck, what did you do? Who did you go to?</li>
     <li>What did you expect the platform to do that it didn't?</li>
   </ul>
 </td></tr>
-<tr><td><strong>Pre-Event</strong></td><td>How satisfied so far? (1-10)</td><td>
+<tr><td><strong>Pre-Event</strong></td><td>
   <ul>
     <li>What's your biggest worry about the event going live?</li>
     <li>Tell me about the last time you had to contact support — what happened?</li>
     <li>If you had an extra hour this week, what would you spend it on?</li>
   </ul>
 </td></tr>
-<tr><td><strong>Post-Event</strong></td><td>Would you recommend us? (NPS 0-10)</td><td>
+<tr><td><strong>Post-Event</strong></td><td>
   <ul>
     <li>What moment during the event made you think "this works" or "this doesn't"?</li>
     <li>What feedback did you get from your own attendees or exhibitors?</li>
     <li>If you ran this event again tomorrow, what would you change on our side?</li>
   </ul>
 </td></tr>
-<tr><td><strong>Annual / Relationship</strong></td><td>Has platform gotten better/same/worse?</td><td>
+<tr><td><strong>Annual / Relationship</strong></td><td>
   <ul>
     <li>What's the conversation internally about the platform — what do your colleagues say?</li>
     <li>What's the one thing that would make this decision easy for you?</li>
@@ -286,8 +183,7 @@
 </td></tr>
 </table>
 
-<h3>After every call: PlanHat quick log (2 min)</h3>
-<p>Creates the call-to-call continuity Barry asked for. To confirm with Susan: PlanHat setup.</p>
+<h3>After every call: quick log in PlanHat (2 min)</h3>
 <table>
 <tr><th>Field</th><th>Format</th></tr>
 <tr><td>Sentiment</td><td>Positive / Neutral / Negative</td></tr>
@@ -299,81 +195,76 @@
 
 </div>
 
-<!-- ==================== TAB 4: ANALYSIS ==================== -->
+<!-- ==================== TAB 3: ANALYSIS ==================== -->
 <div id="analysis" class="tab-content">
 
 <h2>Analysis &amp; Tracking</h2>
 
-<h2>Phase 1: Now</h2>
-<table>
-<tr><th>Tool</th><th>What it does</th></tr>
-<tr><td><strong><a href="https://admin.typeform.com/" target="_blank">Typeform</a></strong></td><td>Per-survey NPS score, response rates, score distributions, open-text feed</td></tr>
-<tr><td><strong><a href="https://docs.google.com/spreadsheets/d/1p6y7JLoov6UYXZbZMaOYAP6Gk555tNun738HGZ_FdGM/edit" target="_blank">Google Sheets</a></strong></td><td>All 3 Typeforms feed into one Sheet. Dashboard tab: overall NPS, avg CSAT, top friction areas, client-level view</td></tr>
-</table>
+<h2>Phase 1: April — Start collecting</h2>
+<p>Surveys go live now. RMs start sending them this month based on where clients are in the event cycle.</p>
+<ul>
+  <li><strong><a href="https://admin.typeform.com/" target="_blank">Typeform</a></strong> — Per-survey NPS score, response rates, score distributions, open-text responses. Built-in analytics, no setup needed.</li>
+  <li><strong><a href="https://docs.google.com/spreadsheets/d/1p6y7JLoov6UYXZbZMaOYAP6Gk555tNun738HGZ_FdGM/edit" target="_blank">Google Sheets</a></strong> — All 3 surveys auto-feed into one sheet. Dashboard tab calculates NPS, average CSAT, response counts. RM Links tab has pre-built URLs per client.</li>
+  <li><strong>Fathom</strong> — Existing call recordings. Susan to set up saved searches for survey question themes to get qualitative data alongside scores.</li>
+</ul>
 
-<h2>Phase 2: May</h2>
-<table>
-<tr><th>Tool</th><th>What it does</th></tr>
-<tr><td><strong>PlanHat</strong></td><td>Survey scores on client record. RM call logs. Automated survey task triggers from event dates. Client health score.</td></tr>
-<tr><td><strong>OKR Dashboard</strong></td><td>NPS and CSAT metrics feed into existing dashboard</td></tr>
-</table>
+<h2>Phase 2: May — PlanHat integration</h2>
+<p>Once PlanHat is set up, survey data connects to client records for a full picture.</p>
+<ul>
+  <li>Survey scores appear on the client record in PlanHat alongside usage data and support tickets</li>
+  <li>PlanHat triggers survey tasks based on event dates — RMs see "Send Post-Event survey to [Client]" and can adjust or postpone</li>
+  <li>RM call logs (sentiment, top issue, key insight) create call-to-call continuity</li>
+  <li>Client health score combines survey data + call sentiment + usage + support tickets</li>
+  <li>NPS and CSAT metrics feed into the OKR dashboard</li>
+</ul>
 
-<h2>Phase 3: Q3</h2>
-<table>
-<tr><th>Tool</th><th>What it does</th></tr>
-<tr><td><strong>Mixpanel/Posthog</strong></td><td>Correlate survey scores with actual platform usage patterns</td></tr>
-<tr><td><strong>Automated reporting</strong></td><td>"Organiser Voice" report generated from dashboard + AI summary</td></tr>
-</table>
-
-<h2>Tool stack</h2>
-<table>
-<tr><th>Layer</th><th>Tool</th><th>When</th><th>Cost</th></tr>
-<tr><td>Survey collection</td><td>Typeform</td><td>Now</td><td>~$25/mo (approved)</td></tr>
-<tr><td>Dashboard</td><td>Google Sheets</td><td>Now</td><td>Free</td></tr>
-<tr><td>Call analysis</td><td>Fathom</td><td>Now</td><td>Existing license</td></tr>
-<tr><td>Client tracking</td><td>PlanHat</td><td>May</td><td>Existing license</td></tr>
-<tr><td>Usage analytics</td><td>Mixpanel</td><td>Q3</td><td>TBD</td></tr>
-</table>
+<h2>Phase 3: Q3 — Deeper insights</h2>
+<p>Connect survey feedback with actual platform usage to understand the full picture.</p>
+<ul>
+  <li>Link survey responses with Mixpanel/Posthog usage data — if a client rates setup as difficult, what are they actually doing in the admin panel? Where do they drop off?</li>
+  <li>Explore admin panel popup surveys for contextual micro-feedback (Taimoor's Phase 2 from the feedback epic)</li>
+  <li>First automated "Organiser Voice" report — quarterly summary of NPS trends, top friction areas, feature requests, and recommendations for Product and Ops</li>
+</ul>
 
 </div>
 
-<!-- ==================== TAB 5: NEXT STEPS ==================== -->
+<!-- ==================== TAB 4: NEXT STEPS ==================== -->
 <div id="next" class="tab-content">
 
-<h2>What's been done</h2>
+<h2>What's done</h2>
 <ul>
-  <li>3 Typeform surveys built and live (EP branded, hidden fields, auto-connected to Google Sheets)</li>
-  <li>Google Sheet dashboard with auto-calculated NPS, CSAT, response counts, RM links</li>
+  <li>3 Typeform surveys built and live (EP branded, auto-connected to <a href="https://docs.google.com/spreadsheets/d/1p6y7JLoov6UYXZbZMaOYAP6Gk555tNun738HGZ_FdGM/edit" target="_blank">Google Sheets</a>)</li>
+  <li>Google Sheet dashboard with auto-calculated NPS, CSAT, response counts</li>
   <li>Plan shared with Barry &amp; Oriana (April 10 call) — feedback incorporated</li>
   <li>Jira epic created by Taimoor (<a href="https://expoplatform.atlassian.net/browse/EP-50795" target="_blank">EP-50795</a>)</li>
 </ul>
 
-<h2>Feedback from April 10 call — what changed</h2>
+<h2>What changed based on April 10 feedback</h2>
 <ul>
-  <li><strong>Merged S1 + S2</strong> into one "Setup &amp; Configuration" survey — for first-time clients, onboarding and pre-event overlap</li>
-  <li><strong>Renamed renewal survey</strong> to "Annual Review" — positioned as overall relationship check-in, not tied to renewal timing. Customer satisfaction questions stay within the event-cycle surveys where they belong</li>
-  <li><strong>Two client plans</strong> — one-event vs multi-event clients have different survey timing</li>
-  <li><strong>RM playbook</strong> — Barry described the call framework as a "best practice playbook." Renamed and positioned as a resource, not a process</li>
-  <li><strong>PlanHat tasks</strong> — surveys sit as tasks per event. RMs adjust dates or skip with a reason. Flexible, not automated</li>
+  <li><strong>Merged onboarding + pre-event</strong> into one "Setup &amp; Configuration" survey — Barry and Oriana confirmed these overlap for first-time clients</li>
+  <li><strong>Reframed renewal survey</strong> as "Annual Review" — positioned as overall relationship check-in, not tied to renewal timing. Customer satisfaction questions stay within the event-cycle surveys</li>
+  <li><strong>Two client plans</strong> — one-event vs multi-event clients have different timing</li>
+  <li><strong>RM Playbook</strong> — Barry described the call framework as a "best practice playbook" — renamed and positioned as a resource</li>
+  <li><strong>PlanHat tasks</strong> — surveys sit as tasks per event. RMs adjust dates or postpone with a reason</li>
 </ul>
 
 <h2>What Barry &amp; Oriana need to review</h2>
 <ul>
-  <li>Do the merged S1 questions work? Anything missing from the old pre-event survey that should be kept?</li>
-  <li>For multi-event clients: when do seasonal debriefs happen? This determines when S2 (Post-Event) gets sent</li>
-  <li>Annual Review (S3): does the timing feel right? Any questions to add/change?</li>
-  <li>RM playbook: useful as a resource? Any questions to add from your experience?</li>
+  <li>Do the merged S1 questions cover everything? Anything missing?</li>
+  <li><strong>Timing for one-event clients:</strong> How long after kickoff for S1? How long after event end for S2?</li>
+  <li><strong>Timing for multi-event clients:</strong> When do seasonal debriefs happen for your key clients? This determines S2 timing.</li>
+  <li>Annual Review (S3): when in the year does this feel natural?</li>
+  <li>RM Playbook: useful as a resource? Anything to add?</li>
 </ul>
 
 <h2>Timeline</h2>
 <table>
 <tr><th>When</th><th>What</th><th>Owner</th></tr>
-<tr><td>W/C 7 Apr</td><td>Share revised plan with Barry &amp; Oriana — request written feedback</td><td>Ilaria</td></tr>
-<tr><td>W/C 14 Apr</td><td>Incorporate feedback, finalise questions, update Typeforms</td><td>Ilaria</td></tr>
+<tr><td>W/C 14 Apr</td><td>Incorporate Barry &amp; Oriana feedback, finalise questions</td><td>Ilaria</td></tr>
 <tr><td>W/C 14 Apr</td><td>Set up PlanHat tasks for survey triggers</td><td>Ilaria + Susan</td></tr>
-<tr><td>W/C 21 Apr</td><td>Follow-up call with Barry &amp; Oriana — walk through final process</td><td>Ilaria</td></tr>
-<tr><td>W/C 21 Apr</td><td>Pilot: start sending surveys (S2 Post-Event first)</td><td>Barry + Oriana</td></tr>
-<tr><td>May 2026</td><td>Connect Typeform &rarr; PlanHat. RM playbook + PlanHat call logs live</td><td>Ilaria + Susan</td></tr>
+<tr><td>W/C 21 Apr</td><td>Follow-up call — walk through final process</td><td>Ilaria + Barry + Oriana</td></tr>
+<tr><td>W/C 21 Apr</td><td>Pilot: start sending surveys (S2 Post-Event first, then S1 for new clients)</td><td>Barry + Oriana</td></tr>
+<tr><td>May 2026</td><td>Connect Typeform &rarr; PlanHat. RM Playbook + PlanHat call logs live</td><td>Ilaria + Susan</td></tr>
 <tr><td>June 2026</td><td>First "Organiser Voice" report</td><td>Ilaria</td></tr>
 </table>
 
