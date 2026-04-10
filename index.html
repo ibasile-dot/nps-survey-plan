@@ -148,7 +148,7 @@
 <p>A best-practice resource for strategy calls — not a script. Conversation prompts to draw from when the moment is right. These are different from the survey questions: the survey captures scores, these go deeper.</p>
 
 <div class="callout-blue callout">
-  <strong>Why this matters:</strong> Having structured, comparable feedback across all clients gives us a monthly understanding of progress — not just a yearly one. This is critical for OKR 3 (CSAT target) and for Tanya's visibility into how the platform is tracking. Every data point counts. The more consistent the feedback, the faster we can act on it.
+  <strong>NPS in every monthly call:</strong> On every strategy call, we ask the NPS question: "How likely are you to recommend ExpoPlatform to another organiser?" (0-10). This gives us a monthly pulse across all clients — not just a yearly snapshot. It's critical for OKR 3 (CSAT target) and for Tanya's visibility into how the platform is tracking month-to-month. Fathom captures these conversations automatically, and once connected to PlanHat, sentiment and NPS data flow into client health scores without manual logging.
 </div>
 
 <table>
@@ -183,15 +183,8 @@
 </td></tr>
 </table>
 
-<h3>After every call: quick log in PlanHat (2 min)</h3>
-<table>
-<tr><th>Field</th><th>Format</th></tr>
-<tr><td>Sentiment</td><td>Positive / Neutral / Negative</td></tr>
-<tr><td>Top issue</td><td>Setup / Config / Support / Features / Performance / Billing / None</td></tr>
-<tr><td>Key insight</td><td>1 sentence</td></tr>
-<tr><td>Action</td><td>1 sentence</td></tr>
-<tr><td>Next call focus</td><td>1 sentence</td></tr>
-</table>
+<h3>After every call: Fathom &rarr; PlanHat (automatic)</h3>
+<p>Fathom captures every call. Once connected to PlanHat, sentiment, key topics, and NPS mentions are automatically extracted and linked to the client record — no manual logging needed. This creates the call-to-call continuity Barry asked for, without adding admin work.</p>
 
 </div>
 
@@ -205,25 +198,25 @@
 <ul>
   <li><strong><a href="https://admin.typeform.com/" target="_blank">Typeform</a></strong> — Per-survey NPS score, response rates, score distributions, open-text responses. Built-in analytics, no setup needed.</li>
   <li><strong><a href="https://docs.google.com/spreadsheets/d/1p6y7JLoov6UYXZbZMaOYAP6Gk555tNun738HGZ_FdGM/edit" target="_blank">Google Sheets</a></strong> — All 3 surveys auto-feed into one sheet. Dashboard tab calculates NPS, average CSAT, response counts. RM Links tab has pre-built URLs per client.</li>
-  <li><strong>Fathom</strong> — Existing call recordings. Susan to set up saved searches for survey question themes to get qualitative data alongside scores.</li>
+  <li><strong>Fathom</strong> — Existing call recordings already capture NPS and sentiment data from every strategy call. This data will be connected to PlanHat in Phase 2.</li>
 </ul>
 
 <h2>Phase 2: May — PlanHat integration</h2>
-<p>Once PlanHat is set up, survey data connects to client records for a full picture.</p>
+<p>Once PlanHat is set up, everything connects to client records for a full picture.</p>
 <ul>
-  <li>Survey scores appear on the client record in PlanHat alongside usage data and support tickets</li>
+  <li>Survey scores appear on the client record alongside usage data and support tickets</li>
   <li>PlanHat triggers survey tasks based on event dates — RMs see "Send Post-Event survey to [Client]" and can adjust or postpone</li>
-  <li>RM call logs (sentiment, top issue, key insight) create call-to-call continuity</li>
-  <li>Client health score combines survey data + call sentiment + usage + support tickets</li>
+  <li><strong>Fathom &rarr; PlanHat:</strong> Call sentiment, NPS mentions, and key topics automatically extracted from Fathom and linked to the client record — no manual logging</li>
+  <li>Client health score combines survey data + Fathom call sentiment + usage + support tickets</li>
   <li>NPS and CSAT metrics feed into the OKR dashboard</li>
 </ul>
 
-<h2>Phase 3: Q3 — Deeper insights</h2>
+<h2>Phase 3: June - August — Deeper insights</h2>
 <p>Connect survey feedback with actual platform usage to understand the full picture.</p>
 <ul>
   <li>Link survey responses with Mixpanel/Posthog usage data — if a client rates setup as difficult, what are they actually doing in the admin panel? Where do they drop off?</li>
   <li>Explore admin panel popup surveys for contextual micro-feedback (Taimoor's Phase 2 from the feedback epic)</li>
-  <li>First automated "Organiser Voice" report — quarterly summary of NPS trends, top friction areas, feature requests, and recommendations for Product and Ops</li>
+  <li>First "Organiser Voice" report — summary of NPS trends, top friction areas, feature requests, and recommendations for Product and Ops</li>
 </ul>
 
 </div>
@@ -264,8 +257,8 @@
 <tr><td>W/C 14 Apr</td><td>Set up PlanHat tasks for survey triggers</td><td>Ilaria + Susan</td></tr>
 <tr><td>W/C 21 Apr</td><td>Follow-up call — walk through final process</td><td>Ilaria + Barry + Oriana</td></tr>
 <tr><td>W/C 21 Apr</td><td>Pilot: start sending surveys (S2 Post-Event first, then S1 for new clients)</td><td>Barry + Oriana</td></tr>
-<tr><td>May 2026</td><td>Connect Typeform &rarr; PlanHat. RM Playbook + PlanHat call logs live</td><td>Ilaria + Susan</td></tr>
-<tr><td>June 2026</td><td>First "Organiser Voice" report</td><td>Ilaria</td></tr>
+<tr><td>May 2026</td><td>Connect Typeform &rarr; PlanHat. Connect Fathom &rarr; PlanHat (auto sentiment + NPS from calls)</td><td>Ilaria + Susan</td></tr>
+<tr><td>Jun-Aug 2026</td><td>First "Organiser Voice" report. Mixpanel usage correlation. Admin panel micro-surveys exploration</td><td>Ilaria</td></tr>
 </table>
 
 </div>
