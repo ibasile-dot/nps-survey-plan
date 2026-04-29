@@ -37,7 +37,7 @@
 
 <div class="header">
   <h1>NPS &amp; Organiser Feedback — Full Plan</h1>
-  <div class="meta">Owner: Ilaria Basile &nbsp;|&nbsp; Updated: 10 April 2026 &nbsp;|&nbsp; Epic: <a href="https://expoplatform.atlassian.net/browse/EP-50795" target="_blank" style="color:#aad4ff">EP-50795</a> &nbsp;|&nbsp; <a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank" style="color:#aad4ff">Google Sheet Dashboard</a> &nbsp;|&nbsp; Status: <span class="tag-green tag">In Progress</span></div>
+  <div class="meta">Owner: Ilaria Basile &nbsp;|&nbsp; Updated: 29 April 2026 &nbsp;|&nbsp; Epic: <a href="https://expoplatform.atlassian.net/browse/EP-50795" target="_blank" style="color:#aad4ff">EP-50795</a> &nbsp;|&nbsp; <a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank" style="color:#aad4ff">Google Sheet Dashboard</a> &nbsp;|&nbsp; Status: <span class="tag-green tag">In Progress</span></div>
 </div>
 
 <div class="tab-bar">
@@ -54,13 +54,13 @@
 <p>No structured feedback loop from organisers. No NPS baseline. No comparable data across clients. We need measurable data that feeds product decisions, retention strategy, and OKR tracking — and a monthly understanding of progress, not just a yearly one.</p>
 
 <h2>2. Three surveys</h2>
-<p>Based on feedback from Barry and Oriana (April 10): merged the onboarding and pre-event surveys (for first-time clients these overlap), and reframed the renewal survey as an annual review. Each survey: 5 questions, ~3 minutes. All built in Typeform, auto-connected to <a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank">Google Sheets</a>.</p>
+<p>Based on feedback from Barry and Oriana (April 10 call + April 27 reply): merged the onboarding and pre-event surveys (for first-time clients these overlap), reframed the renewal survey as an annual review, and locked in the timing for one-event vs multi-event clients. Each survey: 5 questions, ~3 minutes. All built in Typeform, auto-connected to <a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank">Google Sheets</a>.</p>
 
 <table>
 <tr><th>#</th><th>Survey</th><th>When</th><th>Purpose</th><th>Typeform</th></tr>
-<tr><td>S1</td><td><strong>Setup &amp; Configuration</strong></td><td>2-4 weeks after kickoff</td><td>Captures onboarding experience, self-service level, platform friction areas. Critical for new clients — shows we're proactive and listening.</td><td><a href="https://form.typeform.com/to/ntQj2K3c" target="_blank">Open survey</a></td></tr>
-<tr><td>S2</td><td><strong>Post-Event</strong></td><td>Between event end and debrief call</td><td>Core survey. NPS, overall satisfaction, product and service feedback. Results feed into the debrief call and give us a comparable baseline across all clients.</td><td><a href="https://form.typeform.com/to/UuBpDwTY" target="_blank">Open survey</a></td></tr>
-<tr><td>S3</td><td><strong>Annual Review</strong></td><td>Once per year — RM decides timing</td><td>Strategic view: platform trajectory, investment priorities, competitive gaps. Understanding the overall relationship — not a renewal conversation.</td><td><a href="https://form.typeform.com/to/qT4zvu8q" target="_blank">Open survey</a></td></tr>
+<tr><td>S1</td><td><strong>Setup &amp; Configuration</strong></td><td>Shortly after the event launches &amp; goes live</td><td>Captures onboarding experience, self-service level, platform friction areas. Critical for new clients — shows we're proactive and listening.</td><td><a href="https://form.typeform.com/to/ntQj2K3c" target="_blank">Open survey</a></td></tr>
+<tr><td>S2</td><td><strong>Post-Event</strong></td><td>7 days after event end (debrief is ~14 days post-event)</td><td>Core survey. NPS, overall satisfaction, product and service feedback. Results feed into the debrief call and give us a comparable baseline across all clients.</td><td><a href="https://form.typeform.com/to/UuBpDwTY" target="_blank">Open survey</a></td></tr>
+<tr><td>S3</td><td><strong>Annual Review</strong></td><td>End of each contract year (multi-year). Single-event clients: folded into the debrief call</td><td>Strategic view: platform trajectory, investment priorities, competitive gaps. Understanding the overall relationship — not a renewal conversation.</td><td><a href="https://form.typeform.com/to/qT4zvu8q" target="_blank">Open survey</a></td></tr>
 </table>
 
 <h2>3. How it works</h2>
@@ -68,8 +68,17 @@
   <li><strong>PlanHat task triggers</strong> — Based on event date, PlanHat creates a task for the RM. RMs can adjust dates or postpone with a reason.</li>
   <li><strong>RM sends Typeform link 7 days before the relevant call</strong> — Gives the organiser time to complete it independently.</li>
   <li><strong>If not completed by the call</strong> — RM walks through the survey on screen in the first 5 minutes.</li>
+  <li><strong>Single-event clients (Annual Review only)</strong> — questions are folded into the debrief call rather than sent as a separate survey. The RM submits the responses on behalf of the client via Typeform after the call (see callout below).</li>
   <li><strong>Data flows automatically</strong> — Typeform &rarr; <a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank">Google Sheet Dashboard</a> (NPS, CSAT, friction areas all auto-calculated).</li>
 </ol>
+
+<div class="callout-blue callout">
+  <strong>RM-submitted entries — keeping the data consistent:</strong> When the RM fills in Typeform on behalf of the client (Annual Review for single-event clients, or any survey not completed by the client), use the URL with <code>?source=rm</code> appended. This populates a hidden field that tags the entry as RM-recorded in the dashboard — clients filling in the form themselves never see it.
+  <ul>
+    <li><strong>NPS and CSAT scores must come directly from the client.</strong> Ask verbally on the call ("on a scale of 0&ndash;10...") and capture the literal number — don't estimate.</li>
+    <li>Open-ended qualitative answers can be paraphrased. Fathom recording is the source of truth if there's any doubt.</li>
+  </ul>
+</div>
 
 <p><strong>Why RM-led:</strong> Clients are more honest with RMs than TAMs. Historical email surveys consistently failed. This approach uses the existing relationship and call schedule.</p>
 
@@ -79,9 +88,9 @@
   <div class="card-title">Plan A: One-event clients</div>
   <table>
   <tr><th>Survey</th><th>When</th><th>Suggested timing</th></tr>
-  <tr><td>S1: Setup &amp; Configuration</td><td>After kickoff</td><td>2-4 weeks after kickoff — <em>Barry &amp; Oriana: does this timing work? When is there enough interaction for feedback?</em></td></tr>
-  <tr><td>S2: Post-Event</td><td>After event</td><td>Send 7 days before the wash-up/debrief call — <em>Barry &amp; Oriana: how long after event end do you usually schedule the debrief?</em></td></tr>
-  <tr><td>S3: Annual Review</td><td>Once per year</td><td>RM decides — <em>Barry &amp; Oriana: when in the year does this feel natural? Around contract anniversary?</em></td></tr>
+  <tr><td>S1: Setup &amp; Configuration</td><td>After event launch</td><td>Shortly after the event launches &amp; goes live — confirmed by Barry &amp; Oriana, 27 Apr</td></tr>
+  <tr><td>S2: Post-Event</td><td>After event end</td><td>7 days after event end — debrief is ~14 days post-event, so survey lands 7 days before debrief — confirmed by Barry &amp; Oriana, 27 Apr</td></tr>
+  <tr><td>S3: Annual Review</td><td>Folded into debrief</td><td>Single-event clients: relationship questions asked during the debrief call. RM submits responses via Typeform after the call (<code>?source=rm</code>). NPS captured verbally from the client — confirmed by Barry &amp; Oriana, 27 Apr</td></tr>
   </table>
 </div>
 
@@ -89,9 +98,9 @@
   <div class="card-title">Plan B: Multi-event clients (e.g. Informa, Hive)</div>
   <table>
   <tr><th>Survey</th><th>When</th><th>Suggested timing</th></tr>
-  <tr><td>S1: Setup &amp; Configuration</td><td>First event only</td><td>Only when there's a new/significant setup — <em>Barry &amp; Oriana: agree?</em></td></tr>
-  <tr><td>S2: Post-Event</td><td>After seasonal debrief</td><td>Not after every single event — aligned with seasonal reviews — <em>Barry &amp; Oriana: when do seasonal debriefs happen for your key clients?</em></td></tr>
-  <tr><td>S3: Annual Review</td><td>Once per year</td><td>Same as Plan A — <em>RM decides timing</em></td></tr>
+  <tr><td>S1: Setup &amp; Configuration</td><td>First event / new setup</td><td>Shortly after the first event launches with a new client, or on a significant new setup — same trigger as Plan A</td></tr>
+  <tr><td>S2: Post-Event</td><td>Per seasonal debrief</td><td>Batched seasonally (Spring + Autumn), not after every single event. S2 sent 7 days before each seasonal debrief — confirmed by Barry &amp; Oriana, 27 Apr</td></tr>
+  <tr><td>S3: Annual Review</td><td>End of each contract year</td><td>Multi-year contracts: at the end of each contract year (e.g. 3-year contract = after year 1 and after year 2) — confirmed by Barry &amp; Oriana, 27 Apr</td></tr>
   </table>
 </div>
 
@@ -149,6 +158,11 @@
 
 <div class="callout-blue callout">
   <strong>NPS in every monthly call:</strong> On every strategy call, we ask the NPS question: "How likely are you to recommend ExpoPlatform to another organiser?" (0-10). This gives us a monthly pulse across all clients — not just a yearly snapshot. It's critical for OKR 3 (CSAT target) and for Tanya's visibility into how the platform is tracking month-to-month. Fathom captures these conversations automatically, and once connected to PlanHat, sentiment and NPS data flow into client health scores without manual logging.
+  <p style="margin-top:10px;"><strong>Two NPS instruments, two jobs — they don't replace each other:</strong></p>
+  <ul>
+    <li><strong>Monthly verbal NPS</strong> (this call) = ongoing trend line, catches drift between events, monthly OKR view for Tanya</li>
+    <li><strong>Survey NPS</strong> (Post-Event + Annual Review) = formal benchmark anchored to a structured customer moment, comparable across clients at the same lifecycle point</li>
+  </ul>
 </div>
 
 <table>
@@ -232,33 +246,43 @@
   <li>Jira epic created by Taimoor (<a href="https://expoplatform.atlassian.net/browse/EP-50795" target="_blank">EP-50795</a>)</li>
 </ul>
 
-<h2>What changed based on April 10 feedback</h2>
+<h2>What changed based on Barry &amp; Oriana feedback</h2>
+<p><strong>From April 10 call:</strong></p>
 <ul>
-  <li><strong>Merged onboarding + pre-event</strong> into one "Setup &amp; Configuration" survey — Barry and Oriana confirmed these overlap for first-time clients</li>
-  <li><strong>Reframed renewal survey</strong> as "Annual Review" — positioned as overall relationship check-in, not tied to renewal timing. Customer satisfaction questions stay within the event-cycle surveys</li>
-  <li><strong>Two client plans</strong> — one-event vs multi-event clients have different timing</li>
-  <li><strong>RM Playbook</strong> — Barry described the call framework as a "best practice playbook" — renamed and positioned as a resource</li>
-  <li><strong>PlanHat tasks</strong> — surveys sit as tasks per event. RMs adjust dates or postpone with a reason</li>
+  <li><strong>Merged onboarding + pre-event</strong> into one "Setup &amp; Configuration" survey — overlap for first-time clients</li>
+  <li><strong>Reframed renewal survey</strong> as "Annual Review" — relationship check-in, not tied to renewal timing</li>
+  <li><strong>Two client plans</strong> — one-event vs multi-event timing differs</li>
+  <li><strong>RM Playbook</strong> — Barry's "best practice playbook" framing — added as a resource</li>
+  <li><strong>PlanHat tasks</strong> — surveys sit as tasks per event, dates adjustable</li>
+</ul>
+<p><strong>From April 27 reply:</strong></p>
+<ul>
+  <li><strong>S1 trigger</strong> — sent shortly after event launches &amp; goes live (not 2-4 weeks after kickoff)</li>
+  <li><strong>S2 timing</strong> — debrief is ~14 days post-event, so S2 sent 7 days post-event</li>
+  <li><strong>Multi-event S2</strong> — batched seasonally (Spring + Autumn), not after every event</li>
+  <li><strong>S3 Annual Review</strong> — multi-year contracts = end of each contract year. Single-event clients = folded into the debrief, RM submits via Typeform after the call</li>
+  <li><strong>Hidden source tag</strong> — Typeform uses <code>?source=rm</code> URL parameter for RM-submitted entries (clients never see the field). NPS &amp; CSAT must come directly from the client</li>
+  <li><strong>Questions locked</strong> — Barry &amp; Oriana confirmed no changes needed to the survey questions</li>
 </ul>
 
-<h2>What Barry &amp; Oriana need to review</h2>
+<h2>What's still open</h2>
 <ul>
-  <li>Do the merged S1 questions cover everything? Anything missing?</li>
-  <li><strong>Timing for one-event clients:</strong> How long after kickoff for S1? How long after event end for S2?</li>
-  <li><strong>Timing for multi-event clients:</strong> When do seasonal debriefs happen for your key clients? This determines S2 timing.</li>
-  <li>Annual Review (S3): when in the year does this feel natural?</li>
-  <li>RM Playbook: useful as a resource? Anything to add?</li>
+  <li><strong>Monthly NPS pulse</strong> — Barry &amp; Oriana haven't weighed in yet on asking the verbal NPS question (0-10) on every monthly strategy call. To be discussed at the kickoff once Chris approves direction.</li>
+  <li><strong>Chris alignment</strong> — meeting w/c 4 May to confirm direction as CCO, pilot scope, and PlanHat integration timing</li>
+  <li><strong>Susan</strong> — confirming PlanHat readiness for survey task linking</li>
 </ul>
 
 <h2>Timeline</h2>
 <table>
 <tr><th>When</th><th>What</th><th>Owner</th></tr>
-<tr><td>W/C 14 Apr</td><td>Incorporate Barry &amp; Oriana feedback, finalise questions</td><td>Ilaria</td></tr>
-<tr><td>W/C 14 Apr</td><td>Set up PlanHat tasks for survey triggers</td><td>Ilaria + Susan</td></tr>
-<tr><td>W/C 21 Apr</td><td>Follow-up call — walk through final process</td><td>Ilaria + Barry + Oriana</td></tr>
-<tr><td>W/C 21 Apr</td><td>Pilot: start sending surveys (S2 Post-Event first, then S1 for new clients)</td><td>Barry + Oriana</td></tr>
-<tr><td>May 2026</td><td>Connect Typeform &rarr; PlanHat. Connect Fathom &rarr; PlanHat (auto sentiment + NPS from calls)</td><td>Ilaria + Susan</td></tr>
-<tr><td>Jun-Aug 2026</td><td>First "Organiser Voice" report. Mixpanel usage correlation. Admin panel micro-surveys exploration</td><td>Ilaria</td></tr>
+<tr><td>27 Apr</td><td>Barry &amp; Oriana confirmed timing (one-event &amp; multi-event flows, questions locked)</td><td>Done</td></tr>
+<tr><td>W/C 28 Apr</td><td>Plan updated to reflect April 27 input. Holding note to Barry &amp; Oriana</td><td>Ilaria</td></tr>
+<tr><td>W/C 4 May</td><td>1:1 with Chris — confirm direction as CCO, pilot scope, PlanHat integration timing</td><td>Ilaria + Chris</td></tr>
+<tr><td>W/C 4 May</td><td>Susan: confirm PlanHat readiness for survey task linking</td><td>Ilaria + Susan</td></tr>
+<tr><td>W/C 11 May</td><td>Kickoff — final walk-through with Chris, Susan, Barry, Oriana. Agree pilot start.</td><td>Ilaria</td></tr>
+<tr><td>W/C 11+ May</td><td>Pilot: start sending surveys (S2 Post-Event first, then S1 for new clients)</td><td>Barry + Oriana</td></tr>
+<tr><td>May–Jun 2026</td><td>Connect Typeform &rarr; PlanHat. Connect Fathom &rarr; PlanHat (auto sentiment + NPS from calls)</td><td>Ilaria + Susan</td></tr>
+<tr><td>Jun–Aug 2026</td><td>First "Organiser Voice" report. Mixpanel usage correlation. Admin panel micro-surveys exploration</td><td>Ilaria</td></tr>
 </table>
 
 </div>
