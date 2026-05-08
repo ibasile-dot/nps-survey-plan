@@ -1,0 +1,9 @@
+# Credentials — never commit
+planhat-webhook-urls.md
+.env
+.env.*
+*.key
+*-secrets.*
+
+# Local files
+.DS_Store
