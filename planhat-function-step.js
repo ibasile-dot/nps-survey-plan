@@ -34,8 +34,10 @@ let message = "";
   );
   if (msgField) message = getAnswerLabel(byFieldId(msgField.id)) || "";
   if (!message) {
-    const longText = answers.find(a => a.type === "long_text");
-    if (longText) message = getAnswerLabel(longText);
+    // Typeform downgrades single-line long_text answers to type "text" at runtime,
+    // so locate the long-text FIELD by its definition.type, then look up its answer.
+    const longTextField = fields.find(f => f.type === "long_text");
+    if (longTextField) message = getAnswerLabel(byFieldId(longTextField.id)) || "";
   }
 }
 
