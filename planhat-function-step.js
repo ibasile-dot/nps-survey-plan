@@ -43,21 +43,23 @@ const cleanWebsite = (rawWebsite || "").replace(/^https?:\/\//, "").replace(/\/$
 
 let resolvedCompanyId = null;
 
-// Look up company by hidden client_name field
+// Look up company by hidden client_name field.
+// PlanHat's getAll({ name }) is a fuzzy filter (prefix/contains), so we must
+// re-filter the results on the client to get an EXACT name match.
+// Without this, "Informa" would match "Informa Group" / "Informa Markets" / etc.
 if (clientName) {
   const matches = await ph.models.companies.getAll({ name: clientName });
-  if (matches.length > 0) {
-    resolvedCompanyId = matches[0]._id;
+  const target = clientName.trim().toLowerCase();
+  const exact = matches.find(m => (m.name || "").trim().toLowerCase() === target);
+  if (exact) {
+    resolvedCompanyId = exact._id;
   }
 }
 
-// Fallback: create company if no match found
+// Strict mode: if no exact match, abort. Do not create phantom companies from
+// typos in the prefilled URL — that would silently corrupt the PlanHat dataset.
 if (!resolvedCompanyId) {
-  const inferredName = clientName || "Unknown Company";
-  const body = { name: inferredName };
-  if (cleanWebsite) body.website = `https://${cleanWebsite}`;
-  const created = await ph.models.companies.create(body);
-  resolvedCompanyId = created._id;
+  return `No PlanHat Company exactly matches client_name "${clientName}" — submission ignored. Check the RM-prefilled URL against the master sheet of canonical Company names.`;
 }
 
 const htmlSummary = [
