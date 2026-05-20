@@ -7,3 +7,8 @@ planhat-webhook-urls.md
 
 # Local files
 .DS_Store
+
+# Survey data and generated local analysis artifacts
+NPS-Survey-Data.xlsx
+nps-dashboard-summary.csv
+sheets/

@@ -1,0 +1,4 @@
+Timestamp,Survey Type,Client Name,Event Name,RM Name,Q1 Score,Q2 Response,Q3 Response,Q4 Score,Q5 Open Text,NPS Category
+"Example: 2026-05-15 10:30",S3 - Post-Event,Acme Events,Acme Expo 2026,RM A,8,Partially,9,"-","Great networking features","Promoter"
+"Example: 2026-05-16 14:20",S3 - Post-Event,Globex Shows,Globex Summit 2026,RM B,6,Yes,5,"-","Admin panel needs simplifying","Detractor"
+"Example: 2026-05-20 09:10",S1 - Onboarding,Initech Events,Initech Forum 2026,RM C,7,"50% / 50%","Exhibitor Management",6,"Video walkthroughs would help","-"
