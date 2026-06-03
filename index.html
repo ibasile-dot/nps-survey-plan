@@ -43,7 +43,7 @@
 <div class="tab-bar">
   <button class="tab-btn active" onclick="showTab('plan')">Survey Plan</button>
   <button class="tab-btn" onclick="showTab('playbook')">RM Playbook</button>
-  <button class="tab-btn" onclick="showTab('analysis')">Analysis &amp; Tracking</button>
+  <button class="tab-btn" onclick="showTab('analysis')">Tracking (Jira)</button>
   <button class="tab-btn" onclick="showTab('next')">Next Steps</button>
 </div>
 
@@ -205,34 +205,21 @@
 <!-- ==================== TAB 3: ANALYSIS ==================== -->
 <div id="analysis" class="tab-content">
 
-<h2>Analysis &amp; Tracking</h2>
+<h2>Tracking (Jira)</h2>
+<p>Live status lives in Jira — this tab links out rather than duplicating it. Roadmap umbrella + full phased plan: <a href="https://expoplatform.atlassian.net/browse/PBV11-281" target="_blank">PBV11-281</a>.</p>
 
-<h2>Phase 1: April — Start collecting</h2>
-<p>Surveys go live now. RMs start sending them this month based on where clients are in the event cycle.</p>
-<ul>
-  <li><strong><a href="https://admin.typeform.com/" target="_blank">Typeform</a></strong> — Per-survey NPS score, response rates, score distributions, open-text responses. Built-in analytics, no setup needed.</li>
-  <li><strong><a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank">Google Sheets</a></strong> — All 3 surveys auto-feed into one sheet. Dashboard tab calculates NPS, average CSAT, response counts. RM Links tab has pre-built URLs per client.</li>
-  <li><strong>Fathom</strong> — Existing call recordings already capture NPS and sentiment data from every strategy call. This data will be connected to Planhat in Phase 2.</li>
-</ul>
+<table>
+<tr><th>Phase / item</th><th>Status</th><th>Jira</th></tr>
+<tr><td>Phase 1 — Plan alignment</td><td><span class="tag tag-green">Done</span></td><td><a href="https://expoplatform.atlassian.net/browse/MG2026-86" target="_blank">MG2026-86</a></td></tr>
+<tr><td>Email templates (RM voice)</td><td><span class="tag tag-green">Done</span></td><td><a href="https://expoplatform.atlassian.net/browse/MG2026-125" target="_blank">MG2026-125</a></td></tr>
+<tr><td>Phase 2 — Pilot + PlanHat capture (NPS standalone)</td><td><span class="tag tag-orange">In progress</span></td><td><a href="https://expoplatform.atlassian.net/browse/MG2026-87" target="_blank">MG2026-87</a></td></tr>
+<tr><td>Phase 3 — Consolidation + dashboard + close-the-loop</td><td><span class="tag">To do</span></td><td><a href="https://expoplatform.atlassian.net/browse/MG2026-88" target="_blank">MG2026-88</a></td></tr>
+<tr><td>OKR3 KR4 mirror (Platform satisfaction &ge; 8.5)</td><td><span class="tag">Tracking</span></td><td><a href="https://expoplatform.atlassian.net/browse/OKR3-14" target="_blank">OKR3-14</a></td></tr>
+</table>
 
-<h2>Phase 2: May build → 1 June launch — Planhat integration</h2>
-<p>Build phase end of May (workflow + task + email templates inside Planhat); 1 June: all customer-facing activity tracked in Planhat (locked with Chris, 6 May). Once live, everything connects to client records for a full picture.</p>
-<ul>
-  <li><strong>Typeform &rarr; Planhat wiring: DONE 13 May.</strong> Survey responses land as Conversations on the matched Company (exact-name match via <code>hidden.client_name</code>), with the customer's free-text answer in the description.</li>
-  <li>Planhat triggers 4 task types based on event dates &amp; quarter — RMs see "Send Post-Event survey to [Client]" or "Capture Verbal NPS — [Client]" and can adjust or postpone (Oriana setting up w/c 18 May).</li>
-  <li><strong>Canonical NPS = RM-entered quarterly</strong> in Planhat's native NPS widget. Surveys feed Conversations, not the NPS field — keeps the quarterly pulse clean and comparable across Companies.</li>
-  <li><strong>Fathom &rarr; Planhat:</strong> Call sentiment, NPS mentions, and key topics automatically extracted from Fathom and linked to the client record — no manual logging. Separate from the canonical NPS field — sentiment feeds the health score, not the NPS number.</li>
-  <li>Client health score combines survey data + Fathom call sentiment + usage + support tickets</li>
-  <li>NPS and CSAT metrics feed into the OKR dashboard</li>
-</ul>
+<p><strong>Pilot response data</strong>: <a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank">Google Sheet</a> — auto-calculated NPS / CSAT while surveys are on Typeform. A native PlanHat dashboard follows once the platform decision lands (see <a href="https://expoplatform.atlassian.net/browse/PBV11-281" target="_blank">PBV11-281</a>).</p>
 
-<h2>Phase 3: June - August — Deeper insights</h2>
-<p>Connect survey feedback with actual platform usage to understand the full picture.</p>
-<ul>
-  <li>Link survey responses with Mixpanel/Posthog usage data — if a client rates setup as difficult, what are they actually doing in the admin panel? Where do they drop off?</li>
-  <li>Explore admin panel popup surveys for contextual micro-feedback (Taimoor's Phase 2 from the feedback epic)</li>
-  <li>First "Organiser Voice" report — summary of NPS trends, top friction areas, feature requests, and recommendations for Product and Ops</li>
-</ul>
+<p><em>Iurii's PlanHat tasks (templates, NPS widget + Fathom check, native-feasibility) are tracked under <a href="https://expoplatform.atlassian.net/browse/MG2026-87" target="_blank">MG2026-87</a> — discrete tickets to be added.</em></p>
 
 </div>
 
