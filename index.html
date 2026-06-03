@@ -37,7 +37,7 @@
 
 <div class="header">
   <h1>NPS &amp; Organiser Feedback — Full Plan</h1>
-  <div class="meta">Owner: Ilaria Basile &nbsp;|&nbsp; Updated: 13 May 2026 &nbsp;|&nbsp; Epic: <a href="https://expoplatform.atlassian.net/browse/EP-50795" target="_blank" style="color:#aad4ff">EP-50795</a> &nbsp;|&nbsp; <a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank" style="color:#aad4ff">Google Sheet Dashboard</a> &nbsp;|&nbsp; Status: <span class="tag-green tag">In Progress</span></div>
+  <div class="meta">Owner: Ilaria Basile &nbsp;|&nbsp; Updated: 3 June 2026 &nbsp;|&nbsp; Epic: <a href="https://expoplatform.atlassian.net/browse/EP-50795" target="_blank" style="color:#aad4ff">EP-50795</a> &nbsp;|&nbsp; <a href="https://docs.google.com/spreadsheets/d/1w_k2qf0wHX1qbc34GgtU_v84bOUHFy2HvDiVk5Awuw4/edit" target="_blank" style="color:#aad4ff">Google Sheet Dashboard</a> &nbsp;|&nbsp; Status: <span class="tag-green tag">In Progress</span></div>
 </div>
 
 <div class="tab-bar">
@@ -267,13 +267,23 @@
   <li><strong>Questions locked</strong> — Barry &amp; Oriana confirmed no changes needed to the survey questions</li>
 </ul>
 
-<h2>What's still open</h2>
+<h2>What's still open (3 June — post-launch review)</h2>
+<p>Go-live was 1 June. The programme is built and wired, but <strong>0 responses so far</strong> — the gap now is operational, not technical: getting RMs sending, and deciding where the data lives.</p>
 <ul>
-  <li><strong>Planhat task templates (4 types)</strong> — Oriana to set up next week (bundled config session): Send S1 / Send S2 / Send S3 (each emails the customer the prefilled URL on its trigger) + Capture Verbal NPS recurring every 90 days per RM-owned Company. Includes the 3 email-template drafts (RM voice). Tracked: <a href="https://expoplatform.atlassian.net/browse/MG2026-125" target="_blank">MG2026-125</a></li>
-  <li><strong>Programme dashboard</strong> — Marco (Planhat) asked 13 May whether native Planhat dashboarding can give us aggregate NPS, distribution by RM/segment/event type, and drilldown into Conversations. Awaiting his reply; drives Phase 2 strategy.</li>
+  <li><strong>Are the Planhat task templates live and firing?</strong> — email templates (<a href="https://expoplatform.atlassian.net/browse/MG2026-125" target="_blank">MG2026-125</a>) marked Done. Confirm with Oriana that the 4 task types (Send S1 / S2 / S3 + Capture Verbal NPS quarterly) are actually triggering on the right clients, and that one test-send per template ran end-to-end.</li>
+  <li><strong>When do RMs start sending?</strong> — pilot start date + first wave of clients (S2 Post-Event first). This is what turns "built" into data.</li>
+  <li><strong>Where surveys + NPS are tracked — decision for Chris.</strong> Surveys currently land in Planhat as <em>Conversations</em> (free-text) and in the Google Sheet (auto-calc). Conversations can't be charted. Three options:
+    <ul>
+      <li><strong>A. Google Sheet</strong> (today) — live, zero work, but a silo and not where customer-facing data is meant to live.</li>
+      <li><strong>B. Planhat native</strong> — extend the Function step to also write the <em>numeric</em> scores to Company fields/metrics, so Planhat dashboards (and the HealthScore factor) can aggregate. Honours the 1-June single-source mandate. <strong>Needs Chris to approve the dev work.</strong></li>
+      <li><strong>C. Expotools "Customer Metrics" module</strong> — feeds from the Sheet or Planhat API; the only option that joins survey data with platform-usage data (the Phase 3 correlation). Exec/Product-facing, sits alongside the OKR + Claude Spend dashboards.</li>
+    </ul>
+    Recommended split: <strong>capture in Planhat</strong> (RM-entered quarterly NPS = canonical, drives HealthScore + close-the-loop), <strong>analyse/report in Expotools</strong> (trends, by RM / segment / event type, usage correlation). System of record vs reporting layer — not either/or.</li>
+  <li><strong>NPS as 6th HealthScore factor</strong> (<a href="https://expoplatform.atlassian.net/browse/MG2026-87" target="_blank">MG2026-87</a>, Susan + Ilaria) — reads the Company's quarterly NPS field, maps to red/amber/green, lightly weighted, with a "use latest within 90 days" rule so a stale score doesn't distort health. Detractor → auto close-the-loop task. Precondition: RMs reliably entering the quarterly NPS field, and (for survey NPS) Option B above.</li>
+  <li><strong>Verbal NPS — start date?</strong> Manual bridge now vs wait for Fathom &rarr; Planhat sentiment to be live.</li>
   <li><strong>Fathom &rarr; Planhat sentiment</strong> — confirm with Susan what's enabled out of the box vs needs configuration. Separate signal from NPS (not a numeric score) — feeds sentiment / health-score, not the canonical NPS field.</li>
-  <li><strong>End-of-May kickoff</strong> — Chris, Susan, Barry, Oriana, Ilaria — final walk-through before 1 June launch</li>
-  <li><strong>Manual cleanup of Planhat test data</strong> (Ilaria) — Pharmexcil 4 test Conversations + Informa Group 2 noise Conversations from 13 May fuzzy-match era. UI-only delete; Chrome extension safety policy blocks automation here.</li>
+  <li><strong>Programme dashboard</strong> — Lucia (Planhat CSM, 14 May) pointed to native NPS page templates (Content Explorer → Global Templates → "NPS"). Only useful once Option B puts numeric scores in Planhat. Follow-up sent asking for the exact UI path + whether there's an API/templating route to build pages programmatically.</li>
+  <li><strong>Owner for the first "Organiser Voice" report</strong> (Jun–Aug).</li>
 </ul>
 
 <h2>What's resolved (post-Chris alignment, 6 May)</h2>
@@ -302,6 +312,7 @@
 <tr><td>W/C 18 May</td><td>Oriana sets up 4 Planhat task templates (Send S1 / S2 / S3 + Capture Verbal NPS quarterly) and sends Ilaria the Planhat links to verify the end-to-end loop from her side</td><td>Oriana</td></tr>
 <tr><td>End May</td><td>Kickoff call — Chris, Susan, Barry, Oriana, Ilaria — final walk-through before launch</td><td>Ilaria</td></tr>
 <tr><td>1 June 2026</td><td><strong>Launch.</strong> All customer-facing activity tracked in Planhat. Surveys go live (S2 Post-Event first, then S1 for new clients)</td><td>Barry + Oriana</td></tr>
+<tr><td><strong>3 June 2026</strong></td><td><strong>Post-launch review</strong> — Chris, Susan, Barry, Oriana, Ilaria. Operationalising: are task templates firing, when RMs start sending, where surveys + NPS are tracked (Sheet / Planhat / Expotools), verbal-NPS start, owner for Organiser Voice report. 0 responses at this point.</td><td>Ilaria</td></tr>
 <tr><td>Jun 2026</td><td>Connect Fathom &rarr; Planhat (auto sentiment from calls)</td><td>Ilaria + Susan</td></tr>
 <tr><td>Jun–Aug 2026</td><td>First "Organiser Voice" report. Mixpanel usage correlation. Admin panel micro-surveys exploration</td><td>Ilaria</td></tr>
 </table>
