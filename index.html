@@ -267,23 +267,28 @@
   <li><strong>Questions locked</strong> — Barry &amp; Oriana confirmed no changes needed to the survey questions</li>
 </ul>
 
-<h2>What's still open (3 June — post-launch review)</h2>
-<p>Go-live was 1 June. The programme is built and wired, but <strong>0 responses so far</strong> — the gap now is operational, not technical: getting RMs sending, and deciding where the data lives.</p>
+<h2>Decisions &amp; next steps — 3 June rollout call</h2>
+<p>Programme is built and now in <strong>pilot</strong>. Attendees: Chris, Susan, Oriana, Barry, Iurii, Ilaria. <a href="https://fathom.video/calls/688113550" target="_blank">Recording</a>.</p>
+
+<h3>Decisions</h3>
 <ul>
-  <li><strong>Are the Planhat task templates live and firing?</strong> — email templates (<a href="https://expoplatform.atlassian.net/browse/MG2026-125" target="_blank">MG2026-125</a>) marked Done. Confirm with Oriana that the 4 task types (Send S1 / S2 / S3 + Capture Verbal NPS quarterly) are actually triggering on the right clients, and that one test-send per template ran end-to-end.</li>
-  <li><strong>When do RMs start sending?</strong> — pilot start date + first wave of clients (S2 Post-Event first). This is what turns "built" into data.</li>
-  <li><strong>Where surveys + NPS are tracked — decision for Chris.</strong> Surveys currently land in Planhat as <em>Conversations</em> (free-text) and in the Google Sheet (auto-calc). Conversations can't be charted. Three options:
+  <li><strong>Pilot now</strong> — each RM runs the surveys with 2 clients, sending manually on the current Typeform links, and flags the new process to clients at debrief. If a client doesn't respond, the RM completes it with them on the call.
     <ul>
-      <li><strong>A. Google Sheet</strong> (today) — live, zero work, but a silo and not where customer-facing data is meant to live.</li>
-      <li><strong>B. Planhat native</strong> — extend the Function step to also write the <em>numeric</em> scores to Company fields/metrics, so Planhat dashboards (and the HealthScore factor) can aggregate. Honours the 1-June single-source mandate. <strong>Needs Chris to approve the dev work.</strong></li>
-      <li><strong>C. Expotools "Customer Metrics" module</strong> — feeds from the Sheet or Planhat API; the only option that joins survey data with platform-usage data (the Phase 3 correlation). Exec/Product-facing, sits alongside the OKR + Claude Spend dashboards.</li>
+      <li>Oriana: Beauty Istanbul (Ipekyolu Intl Exhibitions) post-event — debrief 8 Jun; Vinexpo Asia (Vinexposium) post-event — debrief 15 Jun; BPL setup survey.</li>
+      <li>Barry: 2 clients TBD — to confirm to Ilaria.</li>
     </ul>
-    Recommended split: <strong>capture in Planhat</strong> (RM-entered quarterly NPS = canonical, drives HealthScore + close-the-loop), <strong>analyse/report in Expotools</strong> (trends, by RM / segment / event type, usage correlation). System of record vs reporting layer — not either/or.</li>
-  <li><strong>NPS as 6th HealthScore factor</strong> (<a href="https://expoplatform.atlassian.net/browse/MG2026-87" target="_blank">MG2026-87</a>, Susan + Ilaria) — reads the Company's quarterly NPS field, maps to red/amber/green, lightly weighted, with a "use latest within 90 days" rule so a stale score doesn't distort health. Detractor → auto close-the-loop task. Precondition: RMs reliably entering the quarterly NPS field, and (for survey NPS) Option B above.</li>
-  <li><strong>Verbal NPS — start date?</strong> Manual bridge now vs wait for Fathom &rarr; Planhat sentiment to be live.</li>
-  <li><strong>Fathom &rarr; Planhat sentiment</strong> — confirm with Susan what's enabled out of the box vs needs configuration. Separate signal from NPS (not a numeric score) — feeds sentiment / health-score, not the canonical NPS field.</li>
-  <li><strong>Programme dashboard</strong> — Lucia (Planhat CSM, 14 May) pointed to native NPS page templates (Content Explorer → Global Templates → "NPS"). Only useful once Option B puts numeric scores in Planhat. Follow-up sent asking for the exact UI path + whether there's an API/templating route to build pages programmatically.</li>
-  <li><strong>Owner for the first "Organiser Voice" report</strong> (Jun–Aug).</li>
+  </li>
+  <li><strong>Consolidate onto Planhat</strong> — move surveys off Typeform into Planhat's native survey + NPS-campaign + dashboard features, to centralise data and enable dashboards. Iurii is investigating feasibility (can Planhat host the surveys directly and run NPS campaigns?). Pilot continues on Typeform until this lands.</li>
+  <li><strong>NPS = standalone metric in Planhat, NOT a HealthScore factor</strong> — quarterly NPS would skew the continuously-updated Health Score. Populate the dedicated Planhat NPS field via the native NPS campaign feature. (Note: the Health Score itself isn't configured yet — all companies currently read 0.)</li>
+  <li><strong>Dashboard</strong> — aim for Planhat-native (the Typeform&rarr;Conversation route only adds a comment, which can't be charted). Build the dashboard only <em>after</em> the platform decision and once pilot data exists. Expotools "Customer Metrics" stays the home for fuller survey analytics (CSAT, themes, verbatims) + usage correlation, built later.</li>
+</ul>
+
+<h3>Open / owners</h3>
+<ul>
+  <li><strong>Iurii</strong> — investigate Planhat native survey + dashboard capability.</li>
+  <li><strong>Oriana</strong> — run the 3 pilot surveys; debrief dates shared (8 &amp; 15 Jun).</li>
+  <li><strong>Barry</strong> — pick 2 pilot clients, tell Ilaria.</li>
+  <li><strong>Ilaria</strong> — add the NPS widget to the Company layout; schedule the 2-week follow-up; update Jira (<a href="https://expoplatform.atlassian.net/browse/PBV11-281" target="_blank">PBV11-281</a>) + Expotools when the dashboard decision lands.</li>
 </ul>
 
 <h2>What's resolved (post-Chris alignment, 6 May)</h2>
@@ -312,9 +317,11 @@
 <tr><td>W/C 18 May</td><td>Oriana sets up 4 Planhat task templates (Send S1 / S2 / S3 + Capture Verbal NPS quarterly) and sends Ilaria the Planhat links to verify the end-to-end loop from her side</td><td>Oriana</td></tr>
 <tr><td>End May</td><td>Kickoff call — Chris, Susan, Barry, Oriana, Ilaria — final walk-through before launch</td><td>Ilaria</td></tr>
 <tr><td>1 June 2026</td><td><strong>Launch.</strong> All customer-facing activity tracked in Planhat. Surveys go live (S2 Post-Event first, then S1 for new clients)</td><td>Barry + Oriana</td></tr>
-<tr><td><strong>3 June 2026</strong></td><td><strong>Post-launch review</strong> — Chris, Susan, Barry, Oriana, Ilaria. Operationalising: are task templates firing, when RMs start sending, where surveys + NPS are tracked (Sheet / Planhat / Expotools), verbal-NPS start, owner for Organiser Voice report. 0 responses at this point.</td><td>Ilaria</td></tr>
-<tr><td>Jun 2026</td><td>Connect Fathom &rarr; Planhat (auto sentiment from calls)</td><td>Ilaria + Susan</td></tr>
-<tr><td>Jun–Aug 2026</td><td>First "Organiser Voice" report. Mixpanel usage correlation. Admin panel micro-surveys exploration</td><td>Ilaria</td></tr>
+<tr><td><strong>3 June 2026</strong></td><td><strong>Rollout call</strong> — agreed: pilot with 2 clients per RM (manual Typeform sends); consolidate onto Planhat (Iurii investigating native surveys + dashboards); NPS = standalone metric, not a HealthScore factor; dashboard after the platform decision + pilot data. <a href="https://fathom.video/calls/688113550" target="_blank">Recording</a>.</td><td>All</td></tr>
+<tr><td>8 June 2026</td><td>Pilot — Beauty Istanbul (Ipekyolu) post-event debrief + survey</td><td>Oriana</td></tr>
+<tr><td>15 June 2026</td><td>Pilot — Vinexpo Asia (Vinexposium) post-event debrief + survey; BPL setup survey</td><td>Oriana</td></tr>
+<tr><td>~17 June 2026</td><td>2-week follow-up review (pilot progress + Iurii's Planhat-native finding)</td><td>Ilaria</td></tr>
+<tr><td>Jun–Aug 2026</td><td>Platform decision &rarr; build NPS dashboard (Planhat-native or Expotools); Expotools "Customer Metrics" for survey analytics + usage correlation; first "Organiser Voice" report</td><td>Ilaria</td></tr>
 </table>
 
 </div>
